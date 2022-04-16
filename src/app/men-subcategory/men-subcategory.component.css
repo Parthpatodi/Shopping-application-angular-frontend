@@ -1,0 +1,37 @@
+/* .banner {
+    background-image: url("../../assets/images/mainImage.jpg");
+    height: 500px;
+    width: 1500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+.main-banner {
+    height: 100%;
+    width: 100%;
+}
+
+.main-banner .banner {
+    height: 500px;
+    width: 100%;
+}
+
+.main-banner .banner img {
+    height: 500px;
+    width: 100%;
+}
+
+.text {
+    margin: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(235, 156, 8);
+}
+
+
+/* @media only screen and (max-width:800px) {
+    .banner {
+        background-repeat: no-repeat;
+    }
+} */
