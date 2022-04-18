@@ -11,11 +11,11 @@ export class WomenSubcategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.womenSub.subCategoryWomen().subscribe(data=>{
-    
+    alert(data);
  this.firstimage = data;
     })
   }
-   callSubWomen(){
-    return this.firstimage;
-   }
+  //  callSubWomen(){
+  //   return this.firstimage;
+  //  }
 }

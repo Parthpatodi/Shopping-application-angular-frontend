@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { WomenSubcategoryComponent } from './women-subcategory/women-subcategory.component';
 import { MenSubcategoryComponent } from './men-subcategory/men-subcategory.component';
 import { MenProductComponent } from './men-product/men-product.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { MainHomeComponent } from './main-home/main-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WomenSubcategoryComponent,
     MenSubcategoryComponent,
-    MenProductComponent
+    MenProductComponent,
+    NavigationComponent,
+    MainHomeComponent
   ],
   imports: [
     BrowserModule,
