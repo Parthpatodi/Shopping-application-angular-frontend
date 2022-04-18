@@ -10,7 +10,7 @@ body {
     display:flex;
     align-items:center;
     padding:20px;
-   background-color: rgb(122, 35, 35);
+   background-color: #810000;
 
 }
 nav{
@@ -28,7 +28,7 @@ nav ul li{
 }
 a{
     text-decoration: none;
-    color:white;
+    color: #ffbe41;;
 }
 p{
 color:#555;
@@ -271,7 +271,7 @@ ul{
         flex-basis:100%;
     }
 
-    
+
 }
 
 
