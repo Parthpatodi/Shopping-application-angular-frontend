@@ -1,7 +1,10 @@
 .body {
-
-    font-family: arial;
-  }
+  box-shadow :1px;
+  font-family: arial;
+}
+.marg-top{
+   margin-top:100px;
+}
   .login-form h1 {
     font-size: 35px;
     text-align: center;

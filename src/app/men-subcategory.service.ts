@@ -5,8 +5,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MenSubcategoryService {
-
-  Men_subcategory='https://vivah-backend.herokuapp.com/subcategory/bySubCategory/625aa8d0d7d40b24a87428fb';
+  Men_subcategory = 'https://vivah-backend.herokuapp.com/subcategory/subcategoryList';
+  //Men_subcategory='https://vivah-backend.herokuapp.com/subcategory/bySubCategory/625aa8d0d7d40b24a87428fb';
   // Men_Product='https://vivah-backend.herokuapp.com/product/byProduct/625abdd5587e57bb3a74a3f5';
  Men_Product='https://vivah-backend.herokuapp.com/product/product-list';
   constructor(private http:HttpClient) { }
