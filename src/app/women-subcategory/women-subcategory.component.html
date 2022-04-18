@@ -1,0 +1,25 @@
+<div class="main-banner">
+    <div class="banner mt-5">
+        <img class="img-fluid" src="../assets/images/Main_image.jpg">
+    </div>
+    <div class="container">
+        <div class="text">
+            <h1>Collection</h1>
+            <p>Celebration wear for women</p>
+        </div>
+        <div class="row">
+            <div *ngFor="let item of firstimage" class="col-lg-3 col-md-5 mt-5 mb-3">
+                <div class="card h-100">
+                    <a href=""><img src="{{item.image}}" class="card-img-top" height="500px" /></a>
+                    <div class="card-body">
+                        <h4 class="card-title" style="font-size: 18px; text-align: center; font-family: philosopherregular; color:#192537;">
+                            {{item.name}}
+                        </h4>
+
+                    </div>
+                    <input type="hidden" name="id" value="{{item._id}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
