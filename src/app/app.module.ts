@@ -13,6 +13,7 @@ import { MenSubcategoryComponent } from './men-subcategory/men-subcategory.compo
 import { MenProductComponent } from './men-product/men-product.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MainHomeComponent } from './main-home/main-home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MainHomeComponent } from './main-home/main-home.component';
     MenSubcategoryComponent,
     MenProductComponent,
     NavigationComponent,
-    MainHomeComponent
+    MainHomeComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
