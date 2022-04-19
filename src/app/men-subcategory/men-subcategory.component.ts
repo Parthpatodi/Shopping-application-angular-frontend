@@ -12,11 +12,14 @@ constructor(private menSub: MenSubcategoryService) { }
 
 ngOnInit(): void {
   this.menSub.subCategoryMen().subscribe(data=>{
-  
+    window.alert(data);
    this.men = data;
   })
 }
  callSubMen(){
   return this.men;
+ }
+ product(){
+   console.log("event fire");
  }
 }
