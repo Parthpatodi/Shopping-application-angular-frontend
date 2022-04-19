@@ -6,6 +6,7 @@ import { SigninComponent } from './signin/signin.component'
 import { WomenSubcategoryComponent } from './women-subcategory/women-subcategory.component';
 import { SignupComponent } from './signup/signup.component';
 import{ AboutUsComponent } from './about-us/about-us.component';
+import {MenProductComponent} from './men-product/men-product.component';
 const routes: Routes = [
  {path:'main-home',component: MainHomeComponent},
  {path:'sub-category-men',component: MenSubcategoryComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
  {path:'signIn',component:SigninComponent},
  {path:'signUp',component:SignupComponent},
  {path:'app-about-us',component:AboutUsComponent},
+ {path:'app-product -us',component:MenProductComponent},
 ];
 
 
