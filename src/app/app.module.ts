@@ -14,6 +14,9 @@ import { MenProductComponent } from './men-product/men-product.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MainHomeComponent } from './main-home/main-home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { MenSherwaniComponent } from './men-sherwani/men-sherwani.component';
+import { MenSuitComponent } from './men-suit/men-suit.component';
+import { MenKurtaPajamaComponent } from './men-kurta-pajama/men-kurta-pajama.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { AboutUsComponent } from './about-us/about-us.component';
     MenProductComponent,
     NavigationComponent,
     MainHomeComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    MenSherwaniComponent,
+    MenSuitComponent,
+    MenKurtaPajamaComponent
   ],
   imports: [
     BrowserModule,
