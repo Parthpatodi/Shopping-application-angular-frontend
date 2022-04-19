@@ -5,10 +5,18 @@
     margin-right:100px;
 }
 .navbar{
-    background-color: #810000;
+    display:flex;
+    align-items:center;
+    padding:20px;
+   background-color: #810000;
 }
 .nav-item{
     margin-right:50px;
+}
+
+.nav-link{
+   font-weight:50px;
+   color:white;
 }
 
 .container {
@@ -36,3 +44,4 @@
 .form-control {
     border: 1px solid #f8c146
 }
+
