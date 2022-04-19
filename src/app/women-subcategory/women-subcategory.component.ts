@@ -14,7 +14,5 @@ export class WomenSubcategoryComponent implements OnInit {
  this.firstimage = data;
     })
   }
-  //  callSubWomen(){
-  //   return this.firstimage;
-  //  }
+ 
 }

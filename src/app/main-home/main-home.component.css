@@ -27,3 +27,6 @@
     margin-top:20px;
     height:100px;
 }
+.card:hover{
+  border: 10px solid black;
+}

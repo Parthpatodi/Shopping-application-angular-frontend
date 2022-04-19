@@ -11,5 +11,14 @@ export class MainHomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // bigImg(x:any) {
+  //   console.log(x);
+  //   x.height = '1000px';
+  //   console.log("event fire");
+  // }
+  // normalImg(x:any) {
+  //   x.style.height = "600px";
+  //   x.style.width = "32px";
+  // }
+        
 }
