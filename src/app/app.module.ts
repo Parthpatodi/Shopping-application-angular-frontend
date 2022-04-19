@@ -14,6 +14,7 @@ import { MenProductComponent } from './men-product/men-product.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MainHomeComponent } from './main-home/main-home.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     MenSubcategoryComponent,
     MenProductComponent,
     NavigationComponent,
-    MainHomeComponent
+    MainHomeComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
