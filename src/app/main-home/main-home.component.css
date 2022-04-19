@@ -28,5 +28,5 @@
     height:100px;
 }
 .card:hover{
-  border: 10px solid black;
+  box-shadow: 0 0 10px gold;
 }

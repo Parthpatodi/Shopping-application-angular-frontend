@@ -5,12 +5,43 @@
     margin-right:100px;
 }
 .navbar{
-    background-color: #810000;
+    display:flex;
+    align-items:center;
+    padding:20px;
+   background-color: #810000;
 }
 .nav-item{
     margin-right:50px;
 }
+
 .nav-link{
    font-weight:50px;
    color:white;
 }
+
+.container {
+    margin-top: 0px
+}
+
+.btn:hover {
+    color: #fff
+}
+
+.input-text:focus {
+    box-shadow: 0px 0px 0px;
+    border-color: #f8c146;
+    outline: 0px;
+    
+}
+.input-group-append{
+    
+}
+.input-group{
+    margin-top:10px;
+    width:300px;
+    margin-left:100px;
+}
+.form-control {
+    border: 1px solid #f8c146
+}
+

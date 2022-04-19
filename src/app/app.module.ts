@@ -13,6 +13,7 @@ import { MenSubcategoryComponent } from './men-subcategory/men-subcategory.compo
 import { MenProductComponent } from './men-product/men-product.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MainHomeComponent } from './main-home/main-home.component';
+import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { MenSherwaniComponent } from './men-sherwani/men-sherwani.component';
 import { MenSuitComponent } from './men-suit/men-suit.component';
@@ -22,7 +23,7 @@ import { MenKurtaPajamaComponent } from './men-kurta-pajama/men-kurta-pajama.com
 @NgModule({
   declarations: [
     AppComponent,
-
+    FooterComponent,
     SigninComponent,
     SignupComponent,
     WomenSubcategoryComponent,

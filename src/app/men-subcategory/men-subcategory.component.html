@@ -9,9 +9,10 @@
         </div>
         <div class="row">
             <div *ngFor="let item of men" class="col-lg-3 col-md-5 mt-5 mb-3">
-                <div class="card h-100">
+                <div  class="card h-100">
 
-                    <a href=""><img src="{{item.image}}" class="card-img-top" height="500px" /></a>
+                    <a routerLink="app-product-us" href=""><img src="{{item.image}}" class="card-img-top" height="500px" /></a>
+
                     <div class="card-body">
                         <h4 class="card-title" style="font-size: 18px; text-align: center; font-family: philosopherregular; color:#192537;">
                             {{item.name}}

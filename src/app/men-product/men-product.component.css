@@ -10,7 +10,9 @@
     height: 100%;
     width: 100%;
 }
-
+.card:hover{
+    box-shadow: 0 0 10px gold;
+  }
 .main-banner .banner {
     height: 500px;
     width: 100%;
