@@ -15,10 +15,10 @@
 }
 
 .nav-link{
-   font-weight:50px;
-   color:white;
+  font-size: 24px;
+   font-weight:300;
+   color: #ffbe41 !important;
 }
-
 .container {
     margin-top: 0px
 }
@@ -29,12 +29,12 @@
 
 .input-text:focus {
     box-shadow: 0px 0px 0px;
-    border-color: #f8c146;
+    border-color: #ffbe41;
     outline: 0px;
-    
+
 }
 .input-group-append{
-    
+
 }
 .input-group{
     margin-top:10px;
@@ -42,6 +42,6 @@
     margin-left:100px;
 }
 .form-control {
-    border: 1px solid #f8c146
+    border: 1px solid #ffbe41
 }
 
