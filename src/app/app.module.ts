@@ -17,6 +17,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { MenSherwaniComponent } from './men-sherwani/men-sherwani.component';
 import { MenSuitComponent } from './men-suit/men-suit.component';
 import { MenKurtaPajamaComponent } from './men-kurta-pajama/men-kurta-pajama.component';
+import {TokenService} from './token.service';
+import {  HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,7 @@ import { MenKurtaPajamaComponent } from './men-kurta-pajama/men-kurta-pajama.com
     AboutUsComponent,
     MenSherwaniComponent,
     MenSuitComponent,
-    MenKurtaPajamaComponent
+   MenKurtaPajamaComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,11 @@ import { MenKurtaPajamaComponent } from './men-kurta-pajama/men-kurta-pajama.com
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenService,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

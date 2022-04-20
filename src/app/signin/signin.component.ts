@@ -10,13 +10,25 @@ export class SigninComponent implements OnInit {
   constructor(private customerService: CustomerRegistrationService) { }
   email: string='';
   password: string='';
-
+  errorMessage:any='';
+  loading:any='';
   ngOnInit(): void {
   }
-  signIn(){
+  
+  sign(){
     this.customerService.signIn_user(this.email,this.password).subscribe(data => {
-      alert("Saved SuccessFul");
-
-    })
+      console.log(data);
+     localStorage.setItem('jwt-token',data.token);
+      alert("login successfully"+data.token);
+      //if(data.status=='Login Status')
+    },
+    (error) => {                              //Error callback
+      console.error('error caught in component')
+      this.errorMessage = error;
+      this.loading = false;
+     alert(this.errorMessage);
+      //throw error;   //You can also throw the error to a global error handler
+    }
+)
   }
 }

@@ -1,6 +1,6 @@
 <div class="main-banner">
     <div class="banner">
-        <img class="img-fluid" src="../assets/images/Men-main_image.jpg">
+        <img class="img-fluid" src="../assets/images/Men-main.jpg">
     </div>
     <div class="container">
         <div class="text">
@@ -10,13 +10,13 @@
         <div class="row">
             <div *ngFor="let item of men" class="col-lg-3 col-md-5 mt-5 mb-3">
                 <div  class="card h-100">
-
-                    <a routerLink="app-product-us" href=""><img src="{{item.image}}" class="card-img-top" height="500px" /></a>
-
+                    <img (click)="viewProduct(item._id)" src="{{item.image}}" class="card-img-top" height="500px" />
+                    
                     <div class="card-body">
                         <h4 class="card-title" style="font-size: 18px; text-align: center; font-family: philosopherregular; color:#192537;">
                             {{item.name}}
                         </h4>
+                        <h4>{{item._id}}</h4>
 
                     </div>
                     <input type="hidden" name="id" value="{{item._id}}">
