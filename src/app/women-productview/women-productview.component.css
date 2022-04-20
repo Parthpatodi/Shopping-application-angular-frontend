@@ -51,13 +51,13 @@
      height: 650px;
      width: 550px;
      margin-bottom: 200px;
-     background-color:whitesmoke ;
+     /* background-color:whitesmoke ; */
 }
 .card-1{
     border:0;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-left: 70px;
-     background-color:whitesmoke;
+     /* background-color:whitesmoke; */
      height: 650px;
      width: 550px;
 }
@@ -65,12 +65,12 @@
 .product-content {
     background: #fff;
     padding: 15px;
-    border: 1px solid lightgray;
+    /* border: 1px solid lightgray; */
 }
 .product-content p._p-name {
     color: black;
     font-size: 20px;
-    border-bottom: 1px solid lightgray;
+    /* border-bottom: 1px solid lightgray; */
     padding-bottom: 30px;
 }
 .p-list span {

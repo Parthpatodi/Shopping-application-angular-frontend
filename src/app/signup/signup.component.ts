@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CustomerRegistrationService} from '../customer-registration.service';
 @Component({
   selector: 'app-signup',
@@ -6,8 +7,8 @@ import { CustomerRegistrationService} from '../customer-registration.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-   
-  constructor(private customerService: CustomerRegistrationService) { }
+
+  constructor(private customerService: CustomerRegistrationService , private router:Router) { }
    name: string='';
    email: string='';
    password: string='';
@@ -19,8 +20,8 @@ export class SignupComponent implements OnInit {
   }
   signUp(){
     this.customerService.signUp_user(this.name,this.email,this.password,this.address,this.mobile).subscribe(data => {
-      alert(data.message);
-
+      alert("Sign up request send . But First verify your email and then login");
+       this.router.navigate(['signIn']);
     },
     (error) => {                              //Error callback
       console.error('error caught in component')
@@ -30,5 +31,5 @@ export class SignupComponent implements OnInit {
       //throw error;   //You can also throw the error to a global error handler
     })
   }
-  
+
 }
