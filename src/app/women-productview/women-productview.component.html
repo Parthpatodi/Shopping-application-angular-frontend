@@ -7,15 +7,15 @@
                     <div class="all-images">
                         <div class="small-images">
 
-                            <img (click)="imageChange($event)" src="{{item.productImageFront}}" >
-                            <img  src="{{item.productImageBack}}" >
-                            <img src="{{item.productImageLeft}}" >
-                            <img src="{{item.productImageRight}}" >
+                            <img #first (click)="imageChange(item.productImageFront)" [src]="item.productImageFront" >
+                            <img #first (click)="imageChange(item.productImageBack)" [src]="item.productImageBack" >
+                            <img #first (click)="imageChange(item.productImageLeft)"[src]="item.productImageLeft" >
+                            <img #first (click)="imageChange(item.productImageRight)" [src]="item.productImageRight" >
 
                         </div>
 
                         <div class="main-images">
-                            <img  src="{{item.productImageFront}}" >
+                            <img #mainImg id="mainImage" src="{{frontImage}}" >
                         </div>
                     </div>
                 </div>
@@ -23,6 +23,7 @@
           </div>  
 
     </div>
+   
     <div class="col-md-6">
         <div class="card">
             <div class="product-content">
