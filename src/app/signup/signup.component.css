@@ -1,6 +1,7 @@
 .body {
 
     font-family: arial;
+  
   }
   .login-form h1 {
     font-size: 35px;
@@ -25,7 +26,9 @@
       display: table;
       padding: 15px 30px 30px;
       box-sizing: border-box;
+     
   }
+  
   .form-group {
     float: left;
     width: 100%;

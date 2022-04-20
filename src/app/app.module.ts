@@ -13,6 +13,11 @@ import { MenSubcategoryComponent } from './men-subcategory/men-subcategory.compo
 import { MenProductComponent } from './men-product/men-product.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MainHomeComponent } from './main-home/main-home.component';
+import { WomenProductviewComponent } from './women-productview/women-productview.component';
+import { MenProductviewComponent } from './men-productview/men-productview.component';
+import { CartComponent } from './cart/cart.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
+
 
 
 @NgModule({
@@ -25,7 +30,12 @@ import { MainHomeComponent } from './main-home/main-home.component';
     MenSubcategoryComponent,
     MenProductComponent,
     NavigationComponent,
-    MainHomeComponent
+    MainHomeComponent,
+    WomenProductviewComponent,
+    MenProductviewComponent,
+    CartComponent,
+    WishlistComponent,
+  
   ],
   imports: [
     BrowserModule,
