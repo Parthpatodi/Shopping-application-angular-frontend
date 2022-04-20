@@ -1,3 +1,4 @@
+
 .body1 {
   box-shadow :1px solid black;
   font-family: arial;
@@ -5,6 +6,7 @@
 .marg-top{
    margin-top:100px;
 }
+
   .login-form h1 {
     font-size: 35px;
     text-align: center;
@@ -28,7 +30,9 @@
       display: table;
       padding: 15px 30px 30px;
       box-sizing: border-box;
+     
   }
+  
   .form-group {
     float: left;
     width: 100%;

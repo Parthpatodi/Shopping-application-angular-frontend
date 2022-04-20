@@ -12,6 +12,11 @@ import { MenSubcategoryComponent } from './men-subcategory/men-subcategory.compo
 import { MenProductComponent } from './men-product/men-product.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MainHomeComponent } from './main-home/main-home.component';
+
+import { WomenProductviewComponent } from './women-productview/women-productview.component';
+import { MenProductviewComponent } from './men-productview/men-productview.component';
+import { CartComponent } from './cart/cart.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { MenSherwaniComponent } from './men-sherwani/men-sherwani.component';
@@ -19,6 +24,7 @@ import { MenSuitComponent } from './men-suit/men-suit.component';
 import { MenKurtaPajamaComponent } from './men-kurta-pajama/men-kurta-pajama.component';
 import {TokenService} from './token.service';
 import {  HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +37,10 @@ import {  HTTP_INTERCEPTORS } from '@angular/common/http';
     MenProductComponent,
     NavigationComponent,
     MainHomeComponent,
+    WomenProductviewComponent,
+    MenProductviewComponent,
+    CartComponent,
+    WishlistComponent,
     AboutUsComponent,
     MenSherwaniComponent,
     MenSuitComponent,

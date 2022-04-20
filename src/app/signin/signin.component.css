@@ -28,6 +28,9 @@
       display: table;
       padding: 15px 30px 30px;
       box-sizing: border-box;
+      box-shadow: 5px 10px;
+      background-image: url('../../assets/images/wedding3.jpg');
+      opacity: 0.6%;
   }
   .form-group {
     float: left;
