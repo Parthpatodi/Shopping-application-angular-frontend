@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenSubcategoryService} from '../men-subcategory.service'
 import {ActivatedRoute} from '@angular/router';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-men-kurta-pajama',
   templateUrl: './men-kurta-pajama.component.html',
@@ -8,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class MenKurtaPajamaComponent implements OnInit {
   image:any = '';
-  constructor(private menService:MenSubcategoryService,private activatedRouter:ActivatedRoute) { }
+  constructor(private menService:MenSubcategoryService,private activatedRouter:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
     let id = this.activatedRouter.snapshot.paramMap.get('id');
@@ -19,5 +20,7 @@ export class MenKurtaPajamaComponent implements OnInit {
     })
   
   }
-
+  add(id:any){
+    this.router.navigate(['cart-product-view',id]);
+  }
 }

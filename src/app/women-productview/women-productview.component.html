@@ -3,19 +3,19 @@
         <div class="col-md-6">
             <div class="card-1">
             <div class="wrapper">
-                <div class="product-box">
+                <div class="product-box ">
                     <div class="all-images">
                         <div class="small-images">
 
-                            <img src="../../assets/images/saree4(front).jpg">
-                            <img src="../../assets/images/saree4(left).jpg">
-                            <img src="../../assets/images/saree4(right).jpg">
-                            <img src="../../assets/images/saree4(back).jpg">
+                            <img (click)="imageChange($event)" src="{{item.productImageFront}}" >
+                            <img  src="{{item.productImageBack}}" >
+                            <img src="{{item.productImageLeft}}" >
+                            <img src="{{item.productImageRight}}" >
 
                         </div>
 
                         <div class="main-images">
-                            <img src="../../assets/images/saree4(front).jpg">
+                            <img  src="{{item.productImageFront}}" >
                         </div>
                     </div>
                 </div>
@@ -26,41 +26,22 @@
     <div class="col-md-6">
         <div class="card">
             <div class="product-content">
-            <p class="_p-name">Saree   </p>
+            <p class="_p-name">{{item.productName}}</p> 
             <div class="_p-price-box">
                <div class="p-list">
                   
-                  <span class="price"> Rs. 4999 </span>
+                  <span class="price"> Rs. {{item.productPrice}}</span> 
                </div>
-               <div class="_p-add-cart">
+               <!-- <div class="_p-add-cart">
                   <div class="_p-qty">
                      <span>Add Quantity</span>
                      <div class="value-button decrease_" id="" value="Decrease Value">-</div>
                      <input type="number" name="qty" id="number" value="1" />
                      <div class="value-button increase_" id="" value="Increase Value">+</div>
                   </div>
-               </div>
+               </div> -->
                <div class="_p-features">
-                  <span> Description About this product:- </span>
-                  Solid color polyester/linen full blackout thick sunscreen floor curtain
-                  Type: General Pleat
-                  Applicable Window Type: Flat Window
-                  Format: Rope
-                  Opening and Closing Method: Left and Right Biparting Open
-                  Processing Accessories Cost: Included
-                  Installation Type: Built-in
-                  Function: High Shading(70%-90%)
-                  Material: Polyester / Cotton
-                  Style: Classic
-                  Pattern: Embroidered
-                  Location: Window
-                  Technics: Woven
-                  Use: Home, Hotel, Hospital, Cafe, Office
-                  Feature: Blackout, Insulated, Flame Retardant
-                  Place of Origin: India
-                  Name: Curtain
-                  Usage: Window Decoration
-                  Keywords: Ready Made Blackout Curtain                        
+                  <span> {{item.productDescription}}</span>                        
                </div>
                <form action="" method="post" accept-charset="utf-8">
                   <ul class="spe_ul"></ul>
