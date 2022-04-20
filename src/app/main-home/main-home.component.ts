@@ -1,24 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-
+import {WomenSubcategoryService} from '../women-subcategory.service'
 @Component({
   selector: 'app-main-home',
   templateUrl: './main-home.component.html',
   styleUrls: ['./main-home.component.css']
 })
 export class MainHomeComponent implements OnInit {
-
-  constructor() { }
+  men:any = '';
+  constructor(private womenService:WomenSubcategoryService) { }
 
   ngOnInit(): void {
+    this.womenService.subCategory().subscribe(data=>{
+      alert(data);
+      this.men = data;
+    });
   }
-  // bigImg(x:any) {
-  //   console.log(x);
-  //   x.height = '1000px';
-  //   console.log("event fire");
-  // }
-  // normalImg(x:any) {
-  //   x.style.height = "600px";
-  //   x.style.width = "32px";
-  // }
-        
+  
 }

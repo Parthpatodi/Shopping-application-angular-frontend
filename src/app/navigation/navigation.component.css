@@ -15,8 +15,8 @@
 }
 
 .nav-link{
-  font-size: 24px;
-   font-weight:300;
+  font-size: 20px;
+   font-weight:3ev;
    color: #ffbe41 !important;
 }
 .container {
@@ -44,4 +44,31 @@
 .form-control {
     border: 1px solid #ffbe41
 }
+/* -----------media query----------- */
 
+@media(min-width:1400px) {}
+
+@media(min-width:992px) and (max-width:1199px) {
+    
+}
+
+@media(max-width:991px) {
+    
+}
+
+@media(min-width:768px) and (max-width:991px) {
+    
+}
+
+@media(max-width:767px) {
+    
+}
+
+@media(max-width:575px) {
+    
+}
+
+@media(max-width:479px) {
+   
+    
+}

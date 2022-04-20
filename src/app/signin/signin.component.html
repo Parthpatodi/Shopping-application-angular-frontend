@@ -3,14 +3,14 @@
         <form>
           <h1>Login</h1>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Enter your email">
+            <input [(ngModel)]="email" type="email" name="email" placeholder="Enter your email">
             <span class="input-icon"><i class="fa fa-envelope"></i></span>
           </div>
           <div class="form-group">
-            <input type="password" name="psw" placeholder="Enter your password">
+            <input [(ngModel)]="password" type="password" name="password" placeholder="Enter your password">
             <span class="input-icon"><i class="fa fa-lock"></i></span>
           </div>      
-          <button class="login-btn">Submitt</button>      
+          <button (click)="sign()"  class="btn btn-warning">Submit</button>      
           <a class="reset-psw" href="#">Forgot your password?</a>
           <div class="seperator"><b>or</b></div>
           <p>Sign in with your social media account</p>
@@ -22,3 +22,5 @@
         </form>
       </div>
     </div>
+<p>{{email}}</p>
+<p>{{password}}</p>
