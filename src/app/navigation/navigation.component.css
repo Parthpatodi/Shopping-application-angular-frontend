@@ -18,6 +18,8 @@
   font-size: 20px;
    font-weight:3ev;
    color: #ffbe41 !important;
+   font-family: philosopher;
+
 }
 .container {
     margin-top: 0px
@@ -31,6 +33,8 @@
     box-shadow: 0px 0px 0px;
     border-color: #ffbe41;
     outline: 0px;
+    font-family: philosopher;
+
 
 }
 .input-group-append{
@@ -40,9 +44,13 @@
     margin-top:10px;
     width:300px;
     margin-left:100px;
+    font-family: philosopher;
+
 }
 .form-control {
-    border: 1px solid #ffbe41
+    border: 1px solid #ffbe41;
+    font-family: philosopher;
+
 }
 /* -----------media query----------- */
 

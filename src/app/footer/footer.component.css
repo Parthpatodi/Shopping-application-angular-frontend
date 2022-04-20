@@ -30,10 +30,15 @@ footer .content .top{
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
+  font-family: philosopher;
+
+
 }
 .content .top .logo-details{
   color: #ffbe41;;
   font-size: 30px;
+  font-family: philosopher;
+
 }
 .content .top .media-icons{
   display: flex;
@@ -89,6 +94,8 @@ footer .content .link-boxes{
   width: 100%;
   display: flex;
   justify-content: space-between;
+  font-family: philosopher;
+  font-size:20px;
 }
 footer .content .link-boxes .box{
   width: calc(100% / 5 - 10px);
@@ -183,6 +190,10 @@ footer .bottom-details .bottom_text{
 }
 .bottom-details .bottom_text a{
   margin-right: 10px;
+}
+.copyright_text{
+  font-family: philosopher;
+
 }
 @media (max-width: 900px) {
   footer .content .link-boxes{
