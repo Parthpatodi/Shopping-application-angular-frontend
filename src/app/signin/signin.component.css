@@ -1,8 +1,10 @@
 .body {
-
+    box-shadow :1px solid rgba(255, 255, 255, 0);
     font-family: arial;
-    
-  } 
+  }
+  .marg-top{
+     margin-top:100px;
+  }
   .login-form h1 {
     font-size: 35px;
     text-align: center;
