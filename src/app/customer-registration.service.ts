@@ -6,10 +6,10 @@ import { HttpClient } from '@angular/common/http';
 export class CustomerRegistrationService {
   signIN = 'http://localhost:3000/user/signin';
  // sign = 'https://vivah-backend.herokuapp.com/user/signup';
- sign = 'http://localhost:3000/user/signup';
+ signUP = 'https://vivah-backend-api.herokuapp.com/user/signup';
   constructor(private http: HttpClient) { }
   signUp_user(name: string, email: string, password: string,address:string,mobile:string){
-    return this.http.post<any>(this.sign,{
+    return this.http.post<any>(this.signUP,{
          name:name,
          email:email,
          password:password,
@@ -18,7 +18,7 @@ export class CustomerRegistrationService {
     });
   }
   signIn_user(email: string, pass: string){
-  
+
     return this.http.post<any>(this.signIN,{
          email:email,
          password:pass

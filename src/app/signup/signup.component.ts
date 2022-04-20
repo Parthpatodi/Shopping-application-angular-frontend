@@ -6,8 +6,8 @@ import { CustomerRegistrationService} from '../customer-registration.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-   
-  constructor(private customerService: CustomerRegistrationService) { }
+
+  constructor(private customerService: CustomerRegistrationService ) { }
    name: string='';
    email: string='';
    password: string='';
@@ -19,7 +19,7 @@ export class SignupComponent implements OnInit {
   }
   signUp(){
     this.customerService.signUp_user(this.name,this.email,this.password,this.address,this.mobile).subscribe(data => {
-      alert(data.message);
+      alert(data);
 
     },
     (error) => {                              //Error callback
@@ -30,5 +30,5 @@ export class SignupComponent implements OnInit {
       //throw error;   //You can also throw the error to a global error handler
     })
   }
-  
+
 }
