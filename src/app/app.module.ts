@@ -9,12 +9,12 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { WomenSubcategoryComponent } from './women-subcategory/women-subcategory.component';
 import { MenSubcategoryComponent } from './men-subcategory/men-subcategory.component';
-import { MenProductComponent } from './men-product/men-product.component';
+
 import { NavigationComponent } from './navigation/navigation.component';
 import { MainHomeComponent } from './main-home/main-home.component';
 
 import { WomenProductviewComponent } from './women-productview/women-productview.component';
-import { MenProductviewComponent } from './men-productview/men-productview.component';
+
 import { CartComponent } from './cart/cart.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { FooterComponent } from './footer/footer.component';
@@ -34,11 +34,10 @@ import {  HTTP_INTERCEPTORS } from '@angular/common/http';
     SignupComponent,
     WomenSubcategoryComponent,
     MenSubcategoryComponent,
-    MenProductComponent,
+   
     NavigationComponent,
     MainHomeComponent,
     WomenProductviewComponent,
-    MenProductviewComponent,
     CartComponent,
     WishlistComponent,
     AboutUsComponent,
