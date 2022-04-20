@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class SearchProductService {
-  searchProductApi = "https://vivah-backend.herokuapp.com/user/search-food";
+  searchProductApi = "https://vivah-backend-api.herokuapp.com/user/search-food";
 
   getSearchResult(text:string){
     return this.http.post<any>(this.searchProductApi,{productName:text});
