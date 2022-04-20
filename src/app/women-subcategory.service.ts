@@ -12,5 +12,5 @@ export class WomenSubcategoryService {
   subCategoryWomen(){
     return this.http.get<any>(this.women_subCategory);
   }
- 
+
 }
