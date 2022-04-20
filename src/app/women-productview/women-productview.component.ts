@@ -2,13 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Router} from '@angular/router';
 import { MenSubcategoryService} from '../men-subcategory.service'
+function modifyImage(currentImage:any,mainImg:any){
+  alert(currentImage.src);
+  mainImg.src = currentImage.src;
+}
 @Component({
   selector: 'app-women-productview',
   templateUrl: './women-productview.component.html',
   styleUrls: ['./women-productview.component.css']
 })
 export class WomenProductviewComponent implements OnInit {
-  item:any= '';
+  item:any;
+  frontImage:any;
+  backImage:any;
+  leftImage:any;
+  rightImage:any;
   constructor(private activatedRouter:ActivatedRoute,private menService:MenSubcategoryService) { }
 
   ngOnInit(): void {
@@ -16,11 +24,18 @@ export class WomenProductviewComponent implements OnInit {
     this.menService.product_detail(id).subscribe(data=>{
       window.alert(data);
       this.item = data;
+      this.frontImage = data.productImageFront;
+      this.backImage = data.productImageBack;
+      this.leftImage = data.productImageLeft;
+      this.rightImage = data.productImageRight;
+      console.log(data);
     })
 
   }
-  imageChange(event:any){
-     event.src = "this.item.productImageBack";
+  imageChange(currentImage:string){
+   // this.item.productImage.
+   this.frontImage = currentImage;
+  //  this.item.productImageBack = this.frontImage;
   }
 
 }
