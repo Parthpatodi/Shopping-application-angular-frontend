@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchProductService } from '../search-product.service';
 
 @Component({
   selector: 'app-navigation',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-
-  constructor() { }
+ searchText:string = "";
+  constructor(private search : SearchProductService ) { }
 
   ngOnInit(): void {
   }
 
+  getSearchResult(){
+    this.search.getSearchResult(this.searchText).subscribe(data => {
+      this.searchText = data;
+    });
+  }
 }
