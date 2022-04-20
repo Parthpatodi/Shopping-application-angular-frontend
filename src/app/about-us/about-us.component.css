@@ -10,6 +10,7 @@
     height: 540px;
     /* min-height: 100vh; */
     background-color: #ddd;
+    font-family:philosopher;
 }
 
 .container {
@@ -39,12 +40,16 @@
 .content-section .title {
     text-transform: uppercase;
     font-size: 28px;
+    font-family: philosopher;
 }
+
 
 .content-section .content h3 {
     margin-top: 20px;
     color: #5d5d5d;
     font-size: 21px;
+    font-family: philosopher;
+
 }
 
 .content-section .content p {
@@ -52,6 +57,7 @@
     font-family: sans-serif;
     font-size: 18px;
     line-height: 1.5;
+    font-family: philosopher;
 }
 
 .content-section .content .button {
@@ -65,11 +71,13 @@
     color: #fff;
     font-size: 25px;
     letter-spacing: 1.5px;
+    font-family: philosopher;
 }
 
 .content-section .content .button a:hover {
     background-color: #a52a2a;
     color: #fff;
+    font-family: philosopher;
 }
 
 .content-section .social {
@@ -80,6 +88,7 @@
     color: #a52a2a;
     font-size: 30px;
     padding: 0px 10px;
+    font-family: philosopher;
 }
 
 .content-section .social i:hover {
@@ -112,6 +121,7 @@
     .content-section .title {
         text-align: center;
         font-size: 19px;
+        font-family: philosopher;
     }
     .content-section .content .button {
         text-align: center;
@@ -161,9 +171,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: philosopher;
 }
 
 .service-card {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.14);
-    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 10px;
+    font-family: philosopher;
+    margin-bottom: 50px;
+    margin-top:50px;
+}
+.service-title h1{
+    font-size: 30px;
 }
