@@ -1,32 +1,66 @@
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <span class="logo_name" style="font-family: Playfair Display; font-size: 36px; color: #ffbe41;">V i v a h</span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a  routerLink="main-home" class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="sub-category-men" class="nav-link active" aria-current="page" href="#">Men</a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="sub-category-women" class="nav-link active" aria-current="page" href="#">Women</a>
-            </li>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container-fluid">
+    <span class="" style="font-family:Playfair Display; font-size: 38px; font-weight: 300; color: #ffbe41;">V i v a h</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a  routerLink="main-home" class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="app-about-us" class="nav-link" aria-current="page" href="#">About us</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="sub-category-men" class="nav-link" aria-current="page" href="#">Men</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="sub-category-women" class="nav-link" aria-current="page" href="#">Women</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="sub-category-women" class="nav-link" aria-current="page" href="#">Cart</a>
+        </li>
+      </ul>
 
-          </ul>
+      <div class="signin d-flex">
 
-          <div class="signin d-flex">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li>
-                <a  routerLink="signIn" class="nav-link active" aria-current="page" href="#">SignIn</a>
-                </li>
-                <li><a  routerLink="signUp" class="nav-link active" aria-current="page" href="#">|  Register</a>
-              </li>
-              </ul>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control input-text" id="searchText" name="searchText" [(ngModel)]="searchText" (keyup.enter)="getSearchResult()" placeholder="Search products...."
+                aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-warning btn-lg" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
+        <ul class="navbar-nav mt-3 me-auto">
+          <li>
+            <a *ngIf='!isLoggedIn()' routerLink="signIn" class="nav-link active" aria-current="page" href="#">SignIn</a>
+          </li>
+          <li><a *ngIf='!isLoggedIn()' routerLink="signUp" class="nav-link active" aria-current="page" href="#">|&nbsp; Register</a>
+          </li>
+          <li>
+            <a *ngIf='isLoggedIn()' (click)="signOut()" class="nav-link active" aria-current="page" href="#">SignOut</a>
+          </li>
+        </ul>
+
       </div>
-    </nav>
+    </div>
+  </div>
+</nav>
+
+
+<div>
+  {{searchText[0].productName}}
+  {{searchText[0].productImageFront}}
+  {{searchText[0].productPrice}}
+  {{searchText[0].product}}
+
+</div>

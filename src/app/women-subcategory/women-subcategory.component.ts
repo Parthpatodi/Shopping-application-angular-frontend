@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {WomenSubcategoryService} from '../women-subcategory.service'
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-women-subcategory',
   templateUrl: './women-subcategory.component.html',
@@ -7,14 +8,14 @@ import {WomenSubcategoryService} from '../women-subcategory.service'
 })
 export class WomenSubcategoryComponent implements OnInit {
     firstimage:any = '';
-  constructor(private womenSub: WomenSubcategoryService) { }
+  constructor(private womenSub: WomenSubcategoryService,private router:Router) { }
 
   ngOnInit(): void {
     this.womenSub.subCategoryWomen().subscribe(data=>{
  this.firstimage = data;
     })
   }
-  //  callSubWomen(){
-  //   return this.firstimage;
-  //  }
+  viewProduct(id:any){
+    this.router.navigate(['kurta-pajama',id]);
+ }
 }

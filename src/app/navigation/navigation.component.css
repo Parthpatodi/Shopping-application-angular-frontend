@@ -15,7 +15,68 @@
 }
 
 .nav-link{
-   font-weight:50px;
-   color:white;
+  font-size: 20px;
+   font-weight:3ev;
+   color: #ffbe41 !important;
+   font-family: philosopher;
+
+}
+.container {
+    margin-top: 0px
 }
 
+.btn:hover {
+    color: #fff
+}
+
+.input-text:focus {
+    box-shadow: 0px 0px 0px;
+    border-color: #ffbe41;
+    outline: 0px;
+    font-family: philosopher;
+
+
+}
+.input-group-append{
+
+}
+.input-group{
+    margin-top:10px;
+    width:300px;
+    margin-left:100px;
+    font-family: philosopher;
+
+}
+.form-control {
+    border: 1px solid #ffbe41;
+    font-family: philosopher;
+
+}
+/* -----------media query----------- */
+
+@media(min-width:1400px) {}
+
+@media(min-width:992px) and (max-width:1199px) {
+
+}
+
+@media(max-width:991px) {
+
+}
+
+@media(min-width:768px) and (max-width:991px) {
+
+}
+
+@media(max-width:767px) {
+
+}
+
+@media(max-width:575px) {
+
+}
+
+@media(max-width:479px) {
+
+
+}

@@ -1,10 +1,13 @@
-.body {
-  box-shadow :1px;
-  font-family: arial;
+
+.body1 {
+  box-shadow :1px solid black;
+  font-family: philosopher;
+
 }
 .marg-top{
    margin-top:100px;
 }
+
   .login-form h1 {
     font-size: 35px;
     text-align: center;
@@ -21,6 +24,7 @@
       float: left;
   }
   .login-form {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 5px;
       background: #fff;
       width: 450px;
       border-radius: 6px;
@@ -28,7 +32,10 @@
       display: table;
       padding: 15px 30px 30px;
       box-sizing: border-box;
+      margin-bottom: 100px;
+     
   }
+  
   .form-group {
     float: left;
     width: 100%;
@@ -58,7 +65,7 @@
       bottom: 0;
       height: 100%;
       padding-left: 35px;
-      color: #810000
+      color:#ffbe41
   }
   .login-form .login-btn {
     background:#810000;
@@ -125,6 +132,7 @@
     padding-top: 40px;
     font-size: 16px;
     margin: 0 0 10px;
+    color:#810000;
   }
   
   @media screen and (max-width:767px) {

@@ -1,31 +1,31 @@
-<div class="body marg-top">
+<div class="body1 marg-top">
     <div class="login-form">
         <form>
           <h1>Signup</h1>
           <div class="form-group">
-            <input type="text" name="name" placeholder="Enter your name">
+            <input [(ngModel)]="name" type="text" name="name" placeholder="Enter your name">
             <span class="input-icon"><i class="fa fa-user"></i></span>
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Enter your email">
+            <input [(ngModel)]="email" type="email" name="email" placeholder="Enter your email">
             <span class="input-icon"><i class="fa fa-envelope"></i></span>
           </div>
           <div class="form-group">
-            <input type="password" name="password" placeholder="Enter your password">
+            <input [(ngModel)]="password" type="password" name="password" placeholder="Enter your password">
             <span class="input-icon"><i class="fa fa-lock"></i></span>
-          </div>      
+          </div>
           <div class="form-group">
-            <input type="text" name="psw" placeholder="Enter your contact no">
+            <input [(ngModel)]="mobile" type="text" name="psw" placeholder="Enter your contact no">
             <span class="input-icon"><i class="fa fa-phone-alt"></i></span>
-          </div>    
-          
-          <div class="form-group">
-            <input type="text" name="add" placeholder="Enter your address">
-            <span class="input-icon"><i class="fa fa-address-book-o	"></i></span>
-          </div>      
+          </div>
 
-          <button class="login-btn">Submitt</button>      
-    
-          <p>Already have an account? Login now</p>
+          <div class="form-group">
+            <input [(ngModel)]="address" type="text" name="add" placeholder="Enter your address">
+            <span class="input-icon"><i class="fa fa-address-book"></i></span>
+          </div>      
+          <button (click)="signUp()"  class="login-btn">Submit</button>
+
+
+          <p>Already have an account? <a>Login now</a></p>
           <!-- Social login buttons -->
-          
+
