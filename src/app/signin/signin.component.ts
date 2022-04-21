@@ -29,6 +29,7 @@ user!:SocialUser;
   sign(){
     this.customerService.signIn_user(this.email,this.password).subscribe(data => {
       console.log(data);
+      alert(data);
      localStorage.setItem('jwt-token',data.token);
       alert("login successfully"+data.token);
       //if(data.status=='Login Status')

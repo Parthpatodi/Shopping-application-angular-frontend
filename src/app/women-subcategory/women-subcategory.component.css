@@ -34,6 +34,10 @@
 .carousel-inner{
     height: 440px;
 }
+.card:hover{
+    cursor:pointer;
+  box-shadow: 0 0 10px gold;
+}
 
 
 /* @media only screen and (max-width:800px) {

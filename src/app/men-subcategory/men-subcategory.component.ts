@@ -12,9 +12,9 @@ export class MenSubcategoryComponent implements OnInit {
 constructor(private menSub: MenSubcategoryService,private router:Router) { }
 
 ngOnInit(): void {
-  this.menSub.subCategoryMen().subscribe(data=>{
+    this.menSub.subCategoryMen().subscribe(data=>{
     console.log(data);
-   this.men = data;
+    this.men = data;
   })
 }
  callSubMen(){

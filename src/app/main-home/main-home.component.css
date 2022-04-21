@@ -8,7 +8,9 @@
 
 .carousel-inner{
     height: 440px;
+
 }
+
 .text {
     margin: 20px;
     text-align: center;
@@ -26,5 +28,6 @@
     height:100px;
 }
 .card:hover{
+    cursor:pointer;
   box-shadow: 0 0 10px gold;
 }
