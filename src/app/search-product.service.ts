@@ -4,10 +4,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class SearchProductService {
-  searchProductApi = "https://vivah-backend-api.herokuapp.com/user/search-food";
+  searchProductApi = "https://vivah-backend-api.herokuapp.com/user/search-product";
 
   getSearchResult(text:string){
-    return this.http.post<any>(this.searchProductApi,{productName:text});
+    return this.http.post<any>(this.searchProductApi,{text:text});
   }
   constructor(private http:HttpClient) { }
 }

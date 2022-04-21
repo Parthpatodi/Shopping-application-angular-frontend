@@ -10,6 +10,8 @@ export class MenSubcategoryService {
  kurtaPajama = "http://localhost:3000/product/byProduct/";
  Men_subcategory='http://localhost:3000/subcategory/bySubCategory/625aa8d0d7d40b24a87428fb';
   // Men_Product='https://vivah-backend.herokuapp.com/product/byProduct/625abdd5587e57bb3a74a3f5';
+ addToCart = 'http://localhost:3000/cart/add-to-cart';
+ view = "http://localhost:3000/cart/view-carts";
  Men_Product='http://localhost:3000/product/product-list';
   constructor(private http:HttpClient) { }
 
@@ -24,5 +26,14 @@ export class MenSubcategoryService {
   }
   product_detail(id:any){
     return this.http.get<any>(this.product_details+id);
+  }
+  addCart(product:any){
+    return this.http.post<any>(this.addToCart,{
+      productId:product
+    });
+  }
+  viewCart(){
+    return this.http.get<any>(this.view);
+
   }
 }

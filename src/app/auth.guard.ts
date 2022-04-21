@@ -10,10 +10,12 @@ export class AuthGuard implements CanActivate {
   constructor(private customerService:CustomerRegistrationService,private router:Router){}
   canActivate():boolean{
    if(this.customerService.checkToken()){
+     alert("token check true")
      return true;
    }
    else{
-     this.router.navigate(['men-product']);
+     alert("token check false");
+     this.router.navigate(['signIn']);
      return false;
 
 

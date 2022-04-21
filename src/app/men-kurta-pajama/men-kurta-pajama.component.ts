@@ -15,12 +15,16 @@ export class MenKurtaPajamaComponent implements OnInit {
     let id = this.activatedRouter.snapshot.paramMap.get('id');
     
     this.menService.product_kurtaP(id).subscribe(data=>{
-      window.alert(data);
       this.image = data;
     })
   
   }
   add(id:any){
     this.router.navigate(['cart-product-view',id]);
+  }
+  addToCart(id:any){
+    this.menService.addCart(id).subscribe(data=>{
+      alert("add to cart");
+    })
   }
 }

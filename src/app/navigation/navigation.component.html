@@ -21,9 +21,10 @@
           <a routerLink="sub-category-women" class="nav-link" aria-current="page" href="#">Women</a>
         </li>
         <li class="nav-item">
-          <a routerLink="sub-category-women" class="nav-link" aria-current="page" href="#">Cart</a>
+          <a routerLink="add-cart" class="nav-link" aria-current="page" href="#">Cart</a>
         </li>
       </ul>
+
 
       <div class="signin d-flex">
 
@@ -59,10 +60,8 @@
     </div>
 </nav>
 
-
-<div>
-  <!-- {{searchText[0].productName}}
-  {{searchText[0].productImageFront}}
-  {{searchText[0].productPrice}}
-  {{searchText[0].product}} -->
+<div *ngFor="let product of searchData">
+  {{product.productName}}
+ <img src="{{product.productImageFront}}" height="80px" width="80px" alt="">
+  {{product.productPrice}}
 </div>

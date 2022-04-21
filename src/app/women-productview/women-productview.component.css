@@ -28,6 +28,10 @@
     height: 100%;
     
 }
+.card:hover{
+    cursor:pointer;
+  box-shadow: 0 0 10px gold;
+}
 .small-images img{
     /* height:19vh; */
     top: 50px;

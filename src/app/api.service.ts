@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  login = "https://vivah-user.herokuapp.com/user/googleSignin"
+  login = "https://vivah-backend-api.herokuapp.com/user/googleSignin"
 
   constructor(private http:HttpClient) { }
 

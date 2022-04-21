@@ -11,8 +11,8 @@ import { SearchProductService } from '../search-product.service';
 export class NavigationComponent implements OnInit {
 
   constructor(private router:Router,private customerService:CustomerRegistrationService ,private search : SearchProductService) { }
-   searchText:any = "";
-
+   searchText:string = "";
+   searchData:any[] = [];
   ngOnInit(): void {
   }
   signOut(){
@@ -25,7 +25,7 @@ export class NavigationComponent implements OnInit {
 
    getSearchResult(){
     this.search.getSearchResult(this.searchText).subscribe(data => {
-      this.searchText = data;
+      this.searchData = data;
     });
   }
 
