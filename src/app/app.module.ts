@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-
+import { SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
+import { GoogleLoginProvider,FacebookLoginProvider } from 'angularx-social-login';
 import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
@@ -24,6 +25,7 @@ import { MenSuitComponent } from './men-suit/men-suit.component';
 import { MenKurtaPajamaComponent } from './men-kurta-pajama/men-kurta-pajama.component';
 import {TokenService} from './token.service';
 import {  HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ApiService } from './api.service';
 
 
 @NgModule({
@@ -48,13 +50,37 @@ import {  HTTP_INTERCEPTORS } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    SocialLoginModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
     useClass:TokenService,
     multi:true
-  }],
+  },
+  {
+    provide: 'SocialAuthServiceConfig',
+    useValue: {
+      autoLogin: false,
+      providers: [
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider(
+            '1087797325536-uoeqs1udcombc84hn9p20udbj6borrkl.apps.googleusercontent.com'
+          )
+        },
+        {
+          id: FacebookLoginProvider.PROVIDER_ID,
+          provider: new FacebookLoginProvider('515612243382774')
+        },
+        
+      ],
+      onError: (err) => {
+        console.error(err);
+      }
+    } as SocialAuthServiceConfig,
+  },ApiService
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

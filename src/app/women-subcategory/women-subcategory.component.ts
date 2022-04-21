@@ -12,7 +12,7 @@ export class WomenSubcategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.womenSub.subCategoryWomen().subscribe(data=>{
- this.firstimage = data;
+    this.firstimage = data;
     })
   }
   viewProduct(id:any){
