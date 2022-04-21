@@ -46,7 +46,7 @@ user!:SocialUser;
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID)
     this.api.logIn(this.email,this.name,this.provider).subscribe(data=>{
       if(data.result)
-      alert(data);
+      alert("Login success"+data.token);
     })
   }
 
@@ -54,7 +54,8 @@ user!:SocialUser;
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID) 
     this.api.logIn(this.email,this.name,this.provider).subscribe(data=>{
       if(data.result)
-      alert(data);
+      localStorage.setItem('jwt-token',data.token);
+      alert("Login success"+data.token);
     })
   }
 
