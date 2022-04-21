@@ -12,7 +12,7 @@ export class MenSubcategoryService {
   // Men_Product='https://vivah-backend.herokuapp.com/product/byProduct/625abdd5587e57bb3a74a3f5';
  Men_Product='https://vivah-backend.herokuapp.com/product/product-list';
  addToCart = 'http://localhost:3000/cart/add-to-cart';
- view = "http://localhost:3000/cart/view-cart/";
+ view = "http://localhost:3000/cart/view-cart";
   constructor(private http:HttpClient) { }
 
   subCategoryMen(){
@@ -32,8 +32,8 @@ export class MenSubcategoryService {
       productList:product
     });
   }
-  viewCart(id:any){
-    return this.http.get<any>(this.view+id);
+  viewCart(){
+    return this.http.get<any>(this.view);
 
   }
 }

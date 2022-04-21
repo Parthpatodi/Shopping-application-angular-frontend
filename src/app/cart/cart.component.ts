@@ -8,7 +8,10 @@ import {MenSubcategoryService} from '../men-subcategory.service'
 export class CartComponent implements OnInit {
   item:any='';
   constructor(private menService:MenSubcategoryService) {
-
+ 
+    this.menService.viewCart().subscribe(data => {
+      alert(data);
+    })
    }
 
   ngOnInit(): void {

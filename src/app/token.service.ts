@@ -13,8 +13,6 @@ export class TokenService implements HttpInterceptor {
         Authorization: ''+localStorage.getItem('jwt-token')
       }
     });
-    alert(tokenizedRequest);
-    console.log(tokenizedRequest);
     return next.handle(tokenizedRequest);
 
   }
