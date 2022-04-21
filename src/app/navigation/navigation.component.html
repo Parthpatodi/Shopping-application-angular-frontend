@@ -40,9 +40,8 @@
                 </button>
               </div>
             </div>
-
           </div>
-
+        </div>
           <ul class="navbar-nav mt-3 me-auto">
             <li>
               <a *ngIf='!isLoggedIn()' routerLink="signIn" class="nav-link active" aria-current="page"
@@ -56,10 +55,9 @@
                 href="#">SignOut</a>
             </li>
           </ul>
-</div>
-</div>
-            </div>
+        </div>
       </div>
+    </div>
 </nav>
 
 <div *ngFor="let product of searchData">
