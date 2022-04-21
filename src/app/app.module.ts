@@ -34,7 +34,6 @@ import {  HTTP_INTERCEPTORS } from '@angular/common/http';
     SignupComponent,
     WomenSubcategoryComponent,
     MenSubcategoryComponent,
-   
     NavigationComponent,
     MainHomeComponent,
     WomenProductviewComponent,

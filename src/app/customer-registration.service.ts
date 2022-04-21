@@ -24,7 +24,7 @@ export class CustomerRegistrationService {
          password:pass
     });
   }
-  checkToken():boolean{
+  public checkToken():boolean{
     return !!localStorage.getItem('jwt-token');
   }
 }

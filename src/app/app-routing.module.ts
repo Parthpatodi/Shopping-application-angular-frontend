@@ -10,6 +10,7 @@ import {MenProductComponent} from './men-product/men-product.component';
 import {AuthGuard} from './auth.guard';
 import {  MenKurtaPajamaComponent} from './men-kurta-pajama/men-kurta-pajama.component';
 import {WomenProductviewComponent} from './women-productview/women-productview.component';
+import { CartComponent} from './cart/cart.component';
 const routes: Routes = [
   {path:'',component: MainHomeComponent},
  {path:'main-home',component: MainHomeComponent},
@@ -18,9 +19,10 @@ const routes: Routes = [
  {path:'signIn',component:SigninComponent},
  {path:'signUp',component:SignupComponent},
  {path:'app-about-us',component:AboutUsComponent},
- {path:'men-product',component:MenProductComponent,canActivate:[AuthGuard]},
+ {path:'men-product',component:MenProductComponent},
  {path:'kurta-pajama/:id',component:MenKurtaPajamaComponent},
- {path:'cart-product-view/:id',component:WomenProductviewComponent}
+ {path:'cart-product-view/:id',component:WomenProductviewComponent,canActivate:[AuthGuard]},
+ {path:'add-cart',component:CartComponent,canActivate:[AuthGuard]}
 ];
 
 

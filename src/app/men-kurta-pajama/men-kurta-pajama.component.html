@@ -16,7 +16,8 @@
                         <h4 class="card-title" style="font-size: 18px; text-align: center; font-family: philosopherregular; color:#192537;">
                             {{item.productName}}
                         </h4>
-                         <button class="btn btn-warning">Add To Cart</button>
+                        <span class="price"> Rs. {{item.productPrice}}</span><br>
+                         <button (click)="addToCart(item._id)" class="btn btn-warning">Add To Cart</button>
                          <button class="btn btn-warning">  Add To Favorite</button>
                     </div>
                     <input type="hidden" name="id" value="{{item._id}}">

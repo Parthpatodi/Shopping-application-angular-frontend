@@ -27,7 +27,7 @@ export class SignupComponent implements OnInit {
       console.error('error caught in component')
       this.errorMessage = error;
       this.loading = false;
-     alert(this.errorMessage.message);
+     alert("already registered");
       //throw error;   //You can also throw the error to a global error handler
     })
   }

@@ -13,7 +13,6 @@ constructor(private menSub: MenSubcategoryService,private router:Router) { }
 
 ngOnInit(): void {
   this.menSub.subCategoryMen().subscribe(data=>{
-    window.alert(data);
    this.men = data;
   })
 }

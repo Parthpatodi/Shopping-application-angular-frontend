@@ -10,9 +10,11 @@ export class TokenService implements HttpInterceptor {
 
     let tokenizedRequest = request.clone({
       setHeaders :{
-        Authorization:'jwt-token xx.yy.zz'
+        Authorization: ''+localStorage.getItem('jwt-token')
       }
     });
+    alert(tokenizedRequest);
+    console.log(tokenizedRequest);
     return next.handle(tokenizedRequest);
 
   }
