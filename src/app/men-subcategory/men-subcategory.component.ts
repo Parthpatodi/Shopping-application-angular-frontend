@@ -8,19 +8,19 @@ import{ CustomerRegistrationService} from '../customer-registration.service'
   styleUrls: ['./men-subcategory.component.css']
 })
 export class MenSubcategoryComponent implements OnInit {
-  men:any = '';
+  men:any[]=[];
 constructor(private menSub: MenSubcategoryService,private router:Router) { }
 
 ngOnInit(): void {
   this.menSub.subCategoryMen().subscribe(data=>{
-    window.alert(data);
+    console.log(data);
    this.men = data;
   })
 }
  callSubMen(){
   return this.men;
  }
- 
+
  viewProduct(id:any){
     this.router.navigate(['kurta-pajama',id]);
  }

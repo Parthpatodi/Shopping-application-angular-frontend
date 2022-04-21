@@ -5,7 +5,7 @@
           <img src="../assets/images/Main_image.jpg" alt="Los Angeles" class="" style="width:100%;">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <img src="../../assets/images/men-main_image.jpg" alt="Chicago" class="d-block" style="width:100%">
+          <img src="../assets/images/men-main_image.jpg" alt="Chicago" class="d-block" style="width:100%">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
           <img src="../assets/images/Main_image.jpg" alt="New York" class="d-block" style="width:100%">
@@ -20,7 +20,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-   
+
   <div class="container">
     <div class="text">
         <h1>Collection</h1>
@@ -30,7 +30,7 @@
         <div *ngFor="let item of men" class="col-lg-3 col-md-5 mt-5 mb-3">
             <div  class="card h-100">
                 <img src="{{item.productImageFront}}" class="card-img-top" height="500px" />
-                
+
                 <div class="card-body">
                     <h4 class="card-title" style="font-size: 18px; text-align: center; font-family: philosopherregular; color:#192537;">
                         {{item.name}}
