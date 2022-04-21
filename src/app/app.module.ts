@@ -66,14 +66,14 @@ import { ApiService } from './api.service';
         {
           id: GoogleLoginProvider.PROVIDER_ID,
           provider: new GoogleLoginProvider(
-            '1087797325536-uoeqs1udcombc84hn9p20udbj6borrkl.apps.googleusercontent.com'
+            '735308524162-eu5dqv98sc557pc1nirgmbk6sm0q74vc.apps.googleusercontent.com'
           )
         },
         {
           id: FacebookLoginProvider.PROVIDER_ID,
           provider: new FacebookLoginProvider('515612243382774')
         },
-        
+
       ],
       onError: (err) => {
         console.error(err);
