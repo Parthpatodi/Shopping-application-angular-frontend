@@ -36,7 +36,6 @@ import { ApiService } from './api.service';
     SignupComponent,
     WomenSubcategoryComponent,
     MenSubcategoryComponent,
-   
     NavigationComponent,
     MainHomeComponent,
     WomenProductviewComponent,

@@ -9,13 +9,14 @@
     align-items:center;
     padding:20px;
    background-color: #810000;
+   
 }
 .nav-item{
     margin-right:50px;
 }
 
 .nav-link{
-  font-size: 20px;
+  font-size: 22px;
    font-weight:3ev;
    color: #ffbe41 !important;
    font-family: philosopher;

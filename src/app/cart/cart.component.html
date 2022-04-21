@@ -14,13 +14,13 @@
            <tbody>
             
                 <tr>
-                    <td><img width="100px" height="100px" src="../../assets/images/aali3.jpg"></td>
+                    <td><img width="100px" height="100px" src="{{item.productImageFront}}"></td>
                     <td>
                         <b>Name :</b> 
                         <br><b>Desc :</b> 
                         <br><b>In stock :</b>
                     </td>
-                    <td><%=cartItemList[index].productPrice%></td>
+                    <td></td>
                     <td>
                         <input onchange="updateQty(this.value,'<%=cartItemList[index].productPrice%>','<%=index%>')" style="width:60px;" type="number" min="1" max="<%=cartItemList[index].productQty%>"/>
                     </td>
