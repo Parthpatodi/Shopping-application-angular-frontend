@@ -6,15 +6,17 @@ import {MenSubcategoryService} from '../men-subcategory.service'
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  item:any='';
+  product:any='';
   constructor(private menService:MenSubcategoryService) {
  
-    this.menService.viewCart().subscribe(data => {
-      alert(data);
-    })
    }
 
   ngOnInit(): void {
+    this.menService.viewCart().subscribe(data => {
+      alert("result"+data);
+      console.log(data);
+      this.product = data;
+    })
   }
   addToCart(id:any){
     

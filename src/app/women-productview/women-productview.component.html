@@ -33,14 +33,7 @@
                   
                   <span class="price"> Rs. {{item.productPrice}}</span> 
                </div>
-               <!-- <div class="_p-add-cart">
-                  <div class="_p-qty">
-                     <span>Add Quantity</span>
-                     <div class="value-button decrease_" id="" value="Decrease Value">-</div>
-                     <input type="number" name="qty" id="number" value="1" />
-                     <div class="value-button increase_" id="" value="Increase Value">+</div>
-                  </div>
-               </div> -->
+              
                <div class="_p-features">
                   <span> {{item.productDescription}}</span>                        
                </div>
@@ -48,7 +41,7 @@
                   <ul class="spe_ul"></ul>
                   <div class="_p-qty-and-cart">
                      <div class="_p-add-cart">
-                        <button  (click)="buyNow()" class="btn-theme btn buy-btn" tabindex="0">
+                        <button  (click)="buyNow()" class="btn-theme btn buy-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" tabindex="0">
                         Buy Now
                         </button>
                       
@@ -57,40 +50,32 @@
                         <input type="hidden" name="url" value="" />    
                     </div>
                   </div>
-                  <div class="container mt-3">
-                    <h3>Modal Example</h3>
-                    <p>Click on the button to open the modal.</p>
-                    
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-                      Open modal
-                    </button>
-                  </div>
-                  
-                  <!-- The Modal -->
-                  <div class="modal" id="myModal">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                  
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                          <h4 class="modal-title">Modal Heading</h4>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                  
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                          Modal body..
-                        </div>
-                  
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                        </div>
-                  
-                      </div>
-                    </div>
-                  </div>
-                  
-                  
-          
-    
+            
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
