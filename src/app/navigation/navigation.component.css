@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap');
 .collapse{
   margin-left:100px;
 }
@@ -16,10 +18,10 @@
 }
 
 .nav-link{
-  font-size: 22px;
+  font-size: 25px;
    font-weight:3ev;
    color: #ffbe41 !important;
-   font-family: philosopher;
+   font-family: 'Alegreya', serif;
 
 }
 .container {
@@ -34,7 +36,7 @@
     box-shadow: 0px 0px 0px;
     border-color: #ffbe41;
     outline: 0px;
-    font-family: philosopher;
+    font-family: 'Alegreya', serif;;
 
 
 }
@@ -45,12 +47,13 @@
     margin-top:10px;
     width:300px;
     margin-left:100px;
-    font-family: philosopher;
+    font-family:'Alegreya', serif;
+    padding-top: 10px;
 
 }
 .form-control {
     border: 1px solid #ffbe41;
-    font-family: philosopher;
+    font-family:'Alegreya', serif;
 
 }
 /* -----------media query----------- */

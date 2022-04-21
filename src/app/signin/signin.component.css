@@ -18,7 +18,7 @@
     float: left;
 }
 .login-form {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px 5px;
     background: #fff;
     width: 450px;
     border-radius: 6px;
@@ -121,6 +121,7 @@
   top: -22px;
   z-index: 1;
   color:#810000;
+  padding-bottom: 10px;
   
 }
 .login-form p {
@@ -129,7 +130,8 @@
   text-align: center;
   font-size: 17px;
   margin: 0 0 10px;
-  color:#810000
+  color:#810000;
+  padding-bottom: 10px;
 }
 h1{
   text-align:center;
