@@ -25,7 +25,7 @@
         </li>
       </ul>
 
-    
+
       <div class="signin d-flex">
 
         <div class="row">
@@ -62,10 +62,8 @@
       </div>
 </nav>
 
-
-<div>
-  <!-- {{searchText[0].productName}}
-  {{searchText[0].productImageFront}}
-  {{searchText[0].productPrice}}
-  {{searchText[0].product}} -->
+<div *ngFor="let product of searchData">
+  {{product.productName}}
+ <img src="{{product.productImageFront}}" height="80px" width="80px" alt="">
+  {{product.productPrice}}
 </div>
