@@ -29,5 +29,13 @@
 }
 .card:hover{
     cursor:pointer;
-  box-shadow: 0 0 10px gold;
+  box-shadow: 0 0 10px black;
+}
+
+.card-title{
+    font-family: 'Alegreya', serif;
+    font-size: 20px;
+     text-align: center; 
+      color:#192537;
+      text-transform:capitalize;
 }
