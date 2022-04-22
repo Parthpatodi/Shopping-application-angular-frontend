@@ -1,5 +1,5 @@
 <div class="main-banner">
-   
+
     <div class="container">
         <div class="text">
             <h1>Collection</h1>
@@ -10,14 +10,14 @@
                 <div class="card h-100">
                     <img (click)="add(item._id)" src="{{item.productImageFront}}" class="card-img-top" height="500px" />
                     <div class="card-body">
-       
+
                         <h4 class="card-title">
                             {{item.productName}}
                         </h4>
 
-                        <span class="price"> Rs. {{item.productPrice}}</span><br>                      
-                        <button  (click)="addToCart(item._id,$event.target)" class="btn hello">Add To Cart</button>
-                        <button  (click)="addToCart(item._id,$event.target)" class="btn hello">Add To Wishlist</button>
+                        <h4 class="price"> Rs. {{item.productPrice}}</h4><br>
+                        <button (click)="addToCart(item._id,$event.target)" class="btn hello">Add To Cart</button>
+                        <button (click)="addToCart(item._id,$event.target)" class="btn hello">Add To Wishlist</button>
                     </div>
                     <input type="hidden" name="id" value="{{item._id}}">
                 </div>
@@ -25,4 +25,3 @@
         </div>
     </div>
 </div>
-
