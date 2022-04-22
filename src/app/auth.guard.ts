@@ -15,13 +15,13 @@ export class AuthGuard implements CanActivate {
    }
    else{
      alert("token check false");
-     
+
      this.router.navigate(['signIn']);
      return false;
 
 
    }
-    
+
   }
-  
+
 }

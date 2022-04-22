@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class PaymentService {
 
   constructor(private http:HttpClient) { }
-  orderApi = "http://localhost:3000/pay";
+  orderApi = "https://vivah-backend-api.herokuapp.com/pay";
   public createOrder(amount:any){
     return this.http.post<any>(this.orderApi,{amount :amount});
   }
