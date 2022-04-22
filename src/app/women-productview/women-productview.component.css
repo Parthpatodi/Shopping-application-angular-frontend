@@ -4,7 +4,15 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+.modal{
+    left: 40%;
+    top:40%;
+    margin:10 10 10 10px;
 
+}
+.modal-dialog{
+   
+}
 .container{
     width:100%;
 

@@ -11,8 +11,11 @@ export class MenSubcategoryService {
  Men_subcategory='http://localhost:3000/subcategory/bySubCategory/625aa8d0d7d40b24a87428fb';
   // Men_Product='https://vivah-backend.herokuapp.com/product/byProduct/625abdd5587e57bb3a74a3f5';
  addToCart = 'http://localhost:3000/cart/add-to-cart';
+ removeToCart = 'http://localhost:3000/cart/remove-from-cart';
  view = "http://localhost:3000/cart/view-carts";
  Men_Product='http://localhost:3000/product/product-list';
+ order = "http://localhost:3000/order/place-order";
+ deleteCart = "http://localhost:3000/cart/delete-carts/";
   constructor(private http:HttpClient) { }
 
   subCategoryMen(){
@@ -35,5 +38,24 @@ export class MenSubcategoryService {
   viewCart(){
     return this.http.get<any>(this.view);
 
+  }
+  removeCart(product:any){
+    return this.http.post<any>(this.removeToCart,{
+      productId:product
+    });
+  }
+  orderPlaced(total:any,address:any,mobile:any,shipping:any,payment:any,orderItem:any){
+    return this.http.post<any>(this.order,{
+      total: total,
+      address: address,
+      mobile: mobile,
+      shipping: shipping,
+      payment: payment,
+      orderList: orderItem
+    
+    });
+  }
+  delCart(){
+    return this.http.post<any>(this.deleteCart,{});
   }
 }
