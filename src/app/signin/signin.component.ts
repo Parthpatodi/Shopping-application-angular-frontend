@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerRegistrationService} from '../customer-registration.service';
 import { GoogleLoginProvider,FacebookLoginProvider,SocialAuthService,SocialUser } from 'angularx-social-login';
-import { Router } from 'express';
+import { Router} from '@angular/router';
 import { ApiService } from '../api.service';
 @Component({
   selector: 'app-signin',
@@ -10,7 +10,7 @@ import { ApiService } from '../api.service';
 })
 export class SigninComponent implements OnInit {
 user!:SocialUser;
-  constructor(private customerService: CustomerRegistrationService,private authService:SocialAuthService,private api:ApiService) { }
+  constructor(private router:Router ,private customerService: CustomerRegistrationService,private authService:SocialAuthService,private api:ApiService) { }
   email: string='';
   password: string='';
   errorMessage:any='';
@@ -25,14 +25,14 @@ user!:SocialUser;
       this.provider = this.user.provider;
     })
   }
-  
+
   sign(){
     this.customerService.signIn_user(this.email,this.password).subscribe(data => {
       console.log(data);
-      alert(data);
+      // alert(data);
      localStorage.setItem('jwt-token',data.token);
-      alert("login successfully"+data.token);
-      //if(data.status=='Login Status')
+      // alert("login successfully"+data.token);
+      this.router.navigate(['main-home']);
     },
     (error) => {                              //Error callback
       console.error('error caught in component')
@@ -52,7 +52,7 @@ user!:SocialUser;
   }
 
   signinwithFacebook():any{
-    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID) 
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID)
     this.api.logIn(this.email,this.name,this.provider).subscribe(data=>{
       if(data.result)
       localStorage.setItem('jwt-token',data.token);
