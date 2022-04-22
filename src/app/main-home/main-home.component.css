@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap');
+.banner{
+    background-color: #f4dbdb;
+}
 .content{
     position:absolute;
     color:white;
@@ -16,7 +19,8 @@
     text-align: center;
     font-family: 'Alegreya', serif;
     font-size: 40px;
-    color: rgb(235, 156, 8);
+    color: #810000;
+    font-weight: 600;
 }
 .template{
     height:200px;
@@ -38,4 +42,7 @@
      text-align: center; 
       color:#192537;
       text-transform:capitalize;
+}
+.text h1{
+    padding-top: 50px;
 }

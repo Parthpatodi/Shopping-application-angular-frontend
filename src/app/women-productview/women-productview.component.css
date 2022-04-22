@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap');
+
 *{
     margin:0;
     padding:0;
-    font-family: sans-serif;
+    font-family: 'Alegreya', serif;
     box-sizing: border-box;
 }
 
@@ -52,9 +54,10 @@
     border:0;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
      margin-left: 30px;
-     height: 650px;
+     height: 350px;
      width: 550px;
      margin-bottom: 200px;
+     
      /* background-color:whitesmoke ; */
 }
 .card-1{
@@ -64,6 +67,7 @@
      /* background-color:whitesmoke; */
      height: 650px;
      width: 550px;
+     
 }
 
 .product-content {
@@ -134,7 +138,7 @@
 }
 ._p-features > span {
     display: block;
-    font-size: 16px;
+    font-size: 20px;
     color: #000;
     font-weight: 500;
 }
@@ -287,4 +291,10 @@
 .sq_box span.wishlist i:hover {
     color: #fd7f34;
 }
- 
+  .price{
+      color:#28a745;
+      display: block;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  

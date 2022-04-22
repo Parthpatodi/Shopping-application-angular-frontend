@@ -1,81 +1,84 @@
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card-1">
-            <div class="wrapper">
-                <div class="product-box ">
-                    <div class="all-images">
-                        <div class="small-images">
-
-                            <img #first (click)="imageChange(item.productImageFront)" [src]="item.productImageFront" >
-                            <img #first (click)="imageChange(item.productImageBack)" [src]="item.productImageBack" >
-                            <img #first (click)="imageChange(item.productImageLeft)"[src]="item.productImageLeft" >
-                            <img #first (click)="imageChange(item.productImageRight)" [src]="item.productImageRight" >
-
-                        </div>
-
-                        <div class="main-images">
-                            <img #mainImg id="mainImage" src="{{frontImage}}" >
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>  
-
-    </div>
-   
+  <div class="row">
     <div class="col-md-6">
-        <div class="card">
-            <div class="product-content">
-            <p class="_p-name">{{item.productName}}</p> 
-            <div class="_p-price-box">
-               <div class="p-list">
-                  
-                  <span class="price"> Rs. {{item.productPrice}}</span> 
-               </div>
-              
-               <div class="_p-features">
-                  <span> {{item.productDescription}}</span>                        
-               </div>
-               <form action="" method="post" accept-charset="utf-8">
-                  <ul class="spe_ul"></ul>
-                  <div class="_p-qty-and-cart">
-                     <div class="_p-add-cart">
-                        <button  (click)="buyNow()" class="btn-theme btn buy-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" tabindex="0">
-                        Buy Now
-                        </button>
-                      
-                        <input type="hidden" name="pid" value="18" />
-                        <input type="hidden" name="price" value="850" />
-                        <input type="hidden" name="url" value="" />    
-                    </div>
-                  </div>
-            
+      <div class="card-1">
+        <div class="wrapper">
+          <div class="product-box ">
+            <div class="all-images">
+              <div class="small-images">
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
+                <img #first (click)="imageChange(item.productImageFront)" [src]="item.productImageFront">
+                <img #first (click)="imageChange(item.productImageBack)" [src]="item.productImageBack">
+                <img #first (click)="imageChange(item.productImageLeft)" [src]="item.productImageLeft">
+                <img #first (click)="imageChange(item.productImageRight)" [src]="item.productImageRight">
+
+              </div>
+
+              <div class="main-images">
+                <img #mainImg id="mainImage" src="{{frontImage}}">
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
+
     </div>
-  </div>
-</div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="product-content">
+          <p class="_p-name"> {{item.productName}}</p>
+          <div class="_p-price-box">
+
+
+            <h4 class="price"> Price:</h4>
+            <span> Rs. {{item.productPrice}}</span>
+          </div>
+
+          <div class="_p-features"> Description:
+            <span> {{item.productDescription}}</span>
+          </div>
+          <form action="" method="post" accept-charset="utf-8">
+            <ul class="spe_ul"></ul>
+            <div class="_p-qty-and-cart">
+              <div class="_p-add-cart">
+                <button (click)="buyNow()" class="btn-theme btn buy-btn" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal" tabindex="0">
+                  Buy Now
+                </button>
+
+                <input type="hidden" name="pid" value="18" />
+                <input type="hidden" name="price" value="850" />
+                <input type="hidden" name="url" value="" />
+              </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Recipient:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                  </div>
+                </div>
+              </div>
+            </div>

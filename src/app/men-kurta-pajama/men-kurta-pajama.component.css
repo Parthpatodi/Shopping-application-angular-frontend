@@ -1,15 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap');
 
 .hello{
-     background-color: #ffbe41;
-     font-family: 'Alegreya', serif;
-     padding:6px 10px;
-     text-decoration:none ;
-     color:black;
-     font-size: 15px;
-     border-radius: none;
-     margin-right: 20px;
+     background-color:#810000;
      
+     border: none;
+     color: white;
+     padding-bottom: 15px 15px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     font-family: 'Alegreya', serif;
+     padding:7px 11px;
+     text-decoration:none ;
+     margin-left: 25px;
+     position: relative;
+     bottom: 15px;
+    
+     
+    
 }
 
 
@@ -27,7 +36,11 @@
     font-family: 'Alegreya', serif;
     font-size: 18px;
     text-align:center;
-    color:#192537
+    color:#192537;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
 
 }
  .text h1{
@@ -44,3 +57,10 @@
     text-align:center;
 
  }
+ .main-banner{
+     background-color: #f4dbdb;
+
+     
+ }
+    
+ 

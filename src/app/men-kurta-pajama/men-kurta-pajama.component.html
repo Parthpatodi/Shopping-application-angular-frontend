@@ -1,25 +1,5 @@
 <div class="main-banner">
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="2000">
-            <img src="../../assets/background-images/lehenga-bg.webp" alt="Los Angeles" class="" style="width:100%;">
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="../../assets/background-images/sherwani-man-bg.webp" alt="Chicago" class="d-block" style="width:100%">
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="../../assets/background-images/salwar-suit-bg.webp" alt="New York" class="d-block" style="width:100%">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+   
     <div class="container">
         <div class="text">
             <h1>Collection</h1>
@@ -35,9 +15,9 @@
                             {{item.productName}}
                         </h4>
 
-                        <h4 class="price"> Rs. {{item.productPrice}}</h4><br>
+                        <h4 class="price"> <i class="fa-solid fa-indian-rupee-sign"></i> Rs. {{item.productPrice}}</h4><br>
                          <button (click)="addToCart(item._id)" class="hello">Add To Cart</button>
-                         <button class="hello">  Add To Favorite</button>
+                         <button class="hello">Add To Wishlist</button>
                     </div>
                     <input type="hidden" name="id" value="{{item._id}}">
                 </div>
