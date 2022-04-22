@@ -40,37 +40,13 @@
             <ul class="spe_ul"></ul>
             <div class="_p-qty-and-cart">
               <div class="_p-add-cart">
-                <button (click)="buyNow()" class="btn-theme btn buy-btn" data-bs-toggle="modal"
-                  data-bs-target="#exampleModal" tabindex="0">
+                <button (click)="onPay()" class="btn hello" >
                   Buy Now
                 </button>
-
+                <button (click)="addToCart(item._id,$event.target)" class="btn hello">Add To Cart</button>
                 <input type="hidden" name="pid" value="18" />
                 <input type="hidden" name="price" value="850" />
                 <input type="hidden" name="url" value="" />
               </div>
             </div>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-       
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        
-         <div class="container">
-           <label>Address</label>
-            <input type="text" class="form-control" placeholder="Enter address"/>
-         </div>
-  
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
 

@@ -16,6 +16,6 @@ export class WomenSubcategoryComponent implements OnInit {
     })
   }
   viewProduct(id:any){
-    this.router.navigate(['kurta-pajama',id]);
+    this.router.navigate(['product',id]);
  }
 }

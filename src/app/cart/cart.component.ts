@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MenSubcategoryService} from '../men-subcategory.service';
 import { Router} from '@angular/router';
+declare let Razorpay:any;
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -12,7 +13,7 @@ export class CartComponent implements OnInit {
   email:any='';
   address:any='';
   contactNumber:any='';
-  total:any='';
+  total:any=0;
   mobile:any='';
   shipping:any='';
   payment:any='';
@@ -29,6 +30,41 @@ export class CartComponent implements OnInit {
       localStorage.setItem('order-item', JSON.stringify(this.product.productList));
     })
   }
+  amount:any;
+  title = 'payment';
+ onPay(){
+   this.menService.createOrder(this.amount).subscribe(data=>{
+     console.log(data.id);
+     console.log(data);
+     alert("first api call");
+     var options = {
+      "key": "rzp_test_MqoJug1nXNqVws", // Enter the Key ID generated from the Dashboard
+      "amount": "10000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      "currency": "INR",
+      "name": "Acme Corp",
+      "description": "Test Transaction",
+      "image": "https://example.com/your_logo",
+      "order_id": data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      "callback_url": "http://localhost:3000/order/payment-status",
+      "prefill": {
+          "name": "Devika Kushwah",
+          "email": "devikakushwah29@gmail.com",
+          "contact": "8770784399"
+      },
+      "notes": {
+          "address": "Razorpay Corporate Office"
+      },
+      "theme": {
+          "color": "#3399cc"
+      }
+  };
+  alert(options);
+  var rzp1 = new Razorpay(options);
+
+    rzp1.open();
+   })
+ }
+
   addToCart(id:any){
     
     this.menService.addCart(id).subscribe(data => {
@@ -48,7 +84,11 @@ export class CartComponent implements OnInit {
   }
   checkOut(){
     this.orderItem = localStorage.getItem('order-item');
-
+    for(var i=0;i<this.orderItem.length;i++){
+      this.total = this.total + this.orderItem[i].productPrice;
+    }
+     alert(this.total);
+ console.log(this.total);
      this.menService.orderPlaced(this.total,this.address,this.mobile,this.shipping,this.payment,this.orderItem).subscribe(data=>{
       alert("order placed"); 
 
@@ -56,5 +96,7 @@ export class CartComponent implements OnInit {
         alert("cart deleted");
       })
      })
+     this.onPay();
+     this.router.navigate(['add-cart']);
   }
 }
