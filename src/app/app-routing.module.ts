@@ -13,7 +13,7 @@ import {WomenProductviewComponent} from './women-productview/women-productview.c
 import { CartComponent} from './cart/cart.component';
 import { SearchProductComponent } from './search-product/search-product.component';
 const routes: Routes = [
-  {path:'',component: MainHomeComponent},
+ {path:'',component: MainHomeComponent},
  {path:'main-home',component: MainHomeComponent},
  {path:'sub-category-men',component: MenSubcategoryComponent},
  {path:'sub-category-women',component: WomenSubcategoryComponent},

@@ -21,36 +21,28 @@
           <a routerLink="sub-category-women" class="nav-link" aria-current="page" href="#">Women</a>
         </li>
         <li class="nav-item">
-          <a routerLink="add-cart" class="nav-link" aria-current="page" href="#"><i style="color: #ffbe41;" class="fa fa-shopping-bag" ></i></a>
+          <a routerLink="add-cart" class="nav-link" aria-current="page" ><i style="color: #ffbe41;" class="fa fa-shopping-bag" ></i></a>
         </li>
         <li class="nav-item">
-          <a routerLink="add-favourite" class="nav-link" aria-current="page" href="#"><i style="color: #ffbe41;" class="fa fa-heart" ></i></a>
+          <a routerLink="add-favourite" class="nav-link" aria-current="page"><i style="color: #ffbe41;" class="fa fa-heart" ></i></a>
         </li>
         <li class="nav-item">
-          <a routerLink="search-product" class="nav-link" aria-current="page" href="#"><i class="fa fa-search" style="color: #ffbe41;" routerLink="search-product"></i></a>
+          <a routerLink="search-product" class="nav-link" aria-current="page"><i class="fa fa-search" style="color: #ffbe41;" routerLink="search-product"></i></a>
         </li>
         <li class="nav-item">
-          <a *ngIf='!isLoggedIn()' routerLink="signIn" class="nav-link active" aria-current="page"
-            href="#">SignIn</a>
+          <a *ngIf='!isLoggedIn()' routerLink="signIn" class="nav-link active" aria-current="page">SignIn</a>
         </li>
         <li class="nav-item">
-          <a *ngIf='!isLoggedIn()' routerLink="signUp" class="nav-link active" aria-current="page"
-            href="#">SignUp</a>
+          <a *ngIf='!isLoggedIn()' routerLink="signUp" class="nav-link active" aria-current="page">SignUp</a>
         </li>
         <li class="nav-item">
-          <a *ngIf='isLoggedIn()' (click)="signOut()" class="nav-link active" aria-current="page"
-            href="#">SignOut</a>
+          <a *ngIf='isLoggedIn()' (click)="signOut()" class="nav-link active" aria-current="page">SignOut</a>
         </li>
         <li class="nav-item">
-          <a routerLink="user-profile" class="nav-link" aria-current="page" href="#"><i style="color: #ffbe41;" class="fa fa-user-circle-o" ></i></a>
+          <a routerLink="user-profile" class="nav-link" aria-current="page" href="#"><i style="color: #ffbe41;" class="fa fa-user-circle" aria-hidden="true" ></i></a>
         </li>
       </ul>
         </div>
       </div>
 </nav>
 
-<div *ngFor="let product of searchData">
-  {{product.productName}}
- <img src="{{product.productImageFront}}" height="80px" width="80px" alt="">
-  {{product.productPrice}}
-</div>
