@@ -22,8 +22,8 @@
     width: 100%;
 }
 .card:hover{
-    cursor:pointer;
-  box-shadow: 0 0 10px gold;
+  cursor:pointer;
+box-shadow: 0 0 10px black;
 }
 .text {
     margin: 20px;

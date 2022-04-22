@@ -13,7 +13,7 @@
 
 }
 .modal-dialog{
-   
+
 }
 .container{
     width:100%;
@@ -36,19 +36,14 @@
     display:flex;
     flex-direction: column;
     height: 100%;
-    
-}
-.card:hover{
-    cursor:pointer;
-  box-shadow: 0 0 10px gold;
+
 }
 .small-images img{
-    /* height:19vh; */
     top: 50px;
     height: 130px;
     margin-bottom: 9px;
     cursor:pointer;
-    opacity:0.6;   
+    opacity:0.6;
 }
 .small-images img:hover{
     opacity:1;
@@ -61,22 +56,16 @@
 .card{
     border:0;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-     margin-left: 30px;
-     height: 350px;
-     width: 550px;
-     margin-bottom: 200px;
-     
-     /* background-color:whitesmoke ; */
+    margin-left: 30px;
+    margin-bottom: 200px;
 }
-.card-1{
+/* .card-1{
     border:0;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-left: 70px;
-     /* background-color:whitesmoke; */
-     height: 650px;
+     height: 640px;
      width: 550px;
-     
-}
+
+} */
 
 .product-content {
     background: #fff;
@@ -85,9 +74,10 @@
 }
 .product-content p._p-name {
     color: black;
-    font-size: 20px;
+    font-size: 24px;
     /* border-bottom: 1px solid lightgray; */
     padding-bottom: 30px;
+    font-family: philosopher;
 }
 .p-list span {
     margin-right: 15px;
@@ -144,15 +134,21 @@
 .p-list {
     margin-bottom: 10px;
 }
+._p-features{
+  font-size: 20px;
+  font-weight: 600;
+  font-family: philosopher;
+}
 ._p-features > span {
     display: block;
-    font-size: 20px;
+    font-size: 18px;
     color: #000;
+    font-family: philosopher;
     font-weight: 500;
 }
 ._p-add-cart .buy-btn {
-    background-color: #fd7f34;
-    color: #fff;
+    background-color: #810000;
+    color: #ffc107;
 }
 ._p-add-cart .btn {
     text-transform: capitalize;
@@ -300,9 +296,9 @@
     color: #fd7f34;
 }
   .price{
-      color:#28a745;
-      display: block;
-    font-size: 20px;
-    font-weight: 500;
+    color:black;
+    display: block;
+    font-family: philosopher;
+    font-size: 24px;
+    font-weight: 600;
   }
-  
