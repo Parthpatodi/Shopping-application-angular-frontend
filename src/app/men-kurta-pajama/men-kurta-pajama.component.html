@@ -15,9 +15,9 @@
                             {{item.productName}}
                         </h4>
 
-                        <h4 class="price"> <i class="fa-solid fa-indian-rupee-sign"></i> Rs. {{item.productPrice}}</h4><br>
-                         <button (click)="addToCart(item._id)" class="hello">Add To Cart</button>
-                         <button class="hello">Add To Wishlist</button>
+                        <span class="price"> Rs. {{item.productPrice}}</span><br>                      
+                        <button  (click)="addToCart(item._id,$event.target)" class="btn hello">Add To Cart</button>
+                        <button  (click)="addToCart(item._id,$event.target)" class="btn hello">Add To Wishlist</button>
                     </div>
                     <input type="hidden" name="id" value="{{item._id}}">
                 </div>
