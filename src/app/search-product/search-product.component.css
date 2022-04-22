@@ -40,3 +40,19 @@ h5:hover{
   color: #ffbe41;
 }
 
+.card:hover{
+  cursor:pointer;
+box-shadow: 0 0 10px black;
+}
+.card-title{
+  font-size: 18px;
+  text-align: center;
+  font-family: philosopher;
+  font-weight: 300;
+}
+.card-price{
+  font-size: 18px;
+  text-align: center;
+  font-family: philosopher;
+  font-weight: 600;
+}

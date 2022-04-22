@@ -25,7 +25,7 @@
     <div class="text">
       <h4></h4>
         <h1>Our Top Trending Collection</h1>
-        
+
     </div>
     <div class="row">
         <div *ngFor="let item of men" class="col-lg-3 col-md-5 mt-5 mb-3">
@@ -34,6 +34,9 @@
                 <div class="card-body">
                     <h4 class="card-title">
                         {{item.productName}}
+                    </h4>
+                    <h4 class="card-price">
+                      &#8377; {{item.productPrice}}
                     </h4>
                 </div>
                 <input type="hidden" name="id" value="{{item._id}}">
