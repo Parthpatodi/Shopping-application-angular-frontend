@@ -14,14 +14,16 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
   }
   signOut(){
-    localStorage.removeItem('jwt-token');
-    this.router.navigate(['signIn']);
+    if(confirm("Are you Sure ?")){
+      localStorage.removeItem('jwt-token');
+      this.router.navigate(['signIn']);
+    }
   }
   isLoggedIn():boolean{
     return this.customerService.checkToken();
   }
+
   cartCall(){
     this.router.navigate(['add-cart']);
   }
-   
 }
