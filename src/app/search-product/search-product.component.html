@@ -1,0 +1,63 @@
+<div class="container searchCom">
+  <div class="row bar">
+    <div class="col-md-6 offset-3 mt-3 search-bar">
+        <div class="input-group mb-3">
+             <input type="text" class="form-control input-text" style="position: relative;" id="searchText" name="searchText"
+                 [(ngModel)]="searchText" (keyup)="getSearchResult()" (keyup.enter)="getSearchResult()" placeholder="Search products...."
+                 aria-label="Recipient's username" aria-describedby="basic-addon2">
+                 <i class="fa fa-search" style="position: absolute; top: 10px; right: 10px;" routerLink="search-product"></i>
+        </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div *ngFor="let product of searchData" class="col-lg-3 col-md-5 mt-5 mb-3">
+        <div class="card h-100">
+            <img (click)="viewProduct(product._id)" src="{{product.productImageFront}}" class="card-img-top" height="500px" />
+            <div class="card-body">
+                <h4 class="card-title"
+                    style="font-size: 18px; text-align: center; font-family: philosopherregular; color:#192537;">
+                    {{product.productName}}
+                </h4>
+                <h4 class="price"> Rs. {{product.productPrice}}</h4><br>
+            </div>
+            <input type="hidden" name="id" value="{{product._id}}">
+        </div>
+    </div>
+</div>
+    <div class="row mt-5">
+       <h3>You can shop by browsing our categories</h3>
+    </div>
+     <div class="row mt-5">
+         <div class="col-md-3">
+              <img src="../../assets/background-images/men-bg.webp" alt="">
+          </div>
+          <div class="col-md-3 mt-5">
+           <b><h4>Men</h4></b><br>
+              <h5>SHERWANI</h5>
+              <br>
+              <h5>INDO-WESTERN</h5>
+              <br>
+              <h5>SUITS & BLAZERS</h5>
+              <br>
+              <h5>KURTA & JACKET</h5>
+         </div>
+
+         <div class="col-md-3">
+             <img src="../../assets/background-images/women-bg.webp" alt="">
+         </div>
+         <div class="col-md-3 mt-5">
+          <b><h4>Women</h4></b><br>
+             <h5>LEHENGA</h5>
+             <br>
+             <h5>INDO-WESTERN</h5>
+             <br>
+             <h5>kURTI & SUITS</h5>
+             <br>
+             <h5>SAREE</h5>
+        </div>
+     </div>
+
+</div>

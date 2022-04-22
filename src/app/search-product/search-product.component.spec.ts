@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MenSherwaniComponent } from './men-sherwani.component';
+import { SearchProductComponent } from './search-product.component';
 
-describe('MenSherwaniComponent', () => {
-  let component: MenSherwaniComponent;
-  let fixture: ComponentFixture<MenSherwaniComponent>;
+describe('SearchProductComponent', () => {
+  let component: SearchProductComponent;
+  let fixture: ComponentFixture<SearchProductComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MenSherwaniComponent ]
+      declarations: [ SearchProductComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MenSherwaniComponent);
+    fixture = TestBed.createComponent(SearchProductComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

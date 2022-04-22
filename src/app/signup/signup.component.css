@@ -33,9 +33,9 @@
       padding: 15px 30px 30px;
       box-sizing: border-box;
       margin-bottom: 100px;
-     
+
   }
-  
+
   .form-group {
     float: left;
     width: 100%;
@@ -65,7 +65,7 @@
       bottom: 0;
       height: 100%;
       padding-left: 35px;
-      color:#ffbe41
+      color:#810000
   }
   .login-form .login-btn {
     background:#810000;
@@ -134,7 +134,7 @@
     margin: 0 0 10px;
     color:#810000;
   }
-  
+
   @media screen and (max-width:767px) {
     .login-form {
         width: 90%;

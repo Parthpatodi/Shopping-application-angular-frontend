@@ -1,4 +1,4 @@
-
+<div class="banner">
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="2000">
@@ -23,15 +23,16 @@
 
   <div class="container">
     <div class="text">
-        <h1>Collection</h1>
-        <p>Celebration wear for men and women</p>
+      <h4></h4>
+        <h1>Our Top Trending Collection</h1>
+        
     </div>
     <div class="row">
         <div *ngFor="let item of men" class="col-lg-3 col-md-5 mt-5 mb-3">
             <div  class="card h-100">
                 <img (click)="viewProduct(item._id)"  src="{{item.productImageFront}}" class="card-img-top" height="500px" />
                 <div class="card-body">
-                    <h4 class="card-title" style="font-size: 18px; text-align: center; font-family: philosopherregular; color:#192537;">
+                    <h4 class="card-title">
                         {{item.productName}}
                     </h4>
                 </div>
@@ -39,5 +40,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 

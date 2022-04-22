@@ -11,8 +11,9 @@ import {AuthGuard} from './auth.guard';
 import {  MenKurtaPajamaComponent} from './men-kurta-pajama/men-kurta-pajama.component';
 import {WomenProductviewComponent} from './women-productview/women-productview.component';
 import { CartComponent} from './cart/cart.component';
+import { SearchProductComponent } from './search-product/search-product.component';
 const routes: Routes = [
-  {path:'',component: MainHomeComponent},
+ {path:'',component: MainHomeComponent},
  {path:'main-home',component: MainHomeComponent},
  {path:'sub-category-men',component: MenSubcategoryComponent},
  {path:'sub-category-women',component: WomenSubcategoryComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
  {path:'men-product',component:MenProductComponent},
  {path:'kurta-pajama/:id',component:MenKurtaPajamaComponent},
  {path:'cart-product-view/:id',component:WomenProductviewComponent,canActivate:[AuthGuard]},
- {path:'add-cart',component:CartComponent,canActivate:[AuthGuard]}
+ {path:'add-cart',component:CartComponent,canActivate:[AuthGuard]},
+ {path:'search-product',component:SearchProductComponent}
 ];
 
 
