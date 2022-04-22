@@ -42,7 +42,7 @@ export class MenKurtaPajamaComponent implements OnInit {
       alert("Add to cart Tp remove to cart change");
       this.menService.addCart(id).subscribe(data=>{
             alert("add to cart");
-      event.textContent = "Remove to cart";
+      event.textContent = "Remove cart";
         console.log(data);
         this.check = true;
         // for(index=0; index< result.length; index++)
