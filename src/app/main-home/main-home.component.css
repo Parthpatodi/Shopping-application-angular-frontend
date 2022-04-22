@@ -37,11 +37,18 @@
 }
 
 .card-title{
-    font-family: 'Alegreya', serif;
-    font-size: 20px;
-     text-align: center;
-      color:#192537;
-      text-transform:capitalize;
+    /* font-family: 'Alegreya', serif; */
+    font-size: 18px;
+    text-align: center;
+    color:#192537;
+    text-transform:capitalize;
+    font-family: philosopher;
+}
+.card-price{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: philosopher;
 }
 .text h1{
     padding-top: 50px;
