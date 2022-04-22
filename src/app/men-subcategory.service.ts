@@ -11,6 +11,12 @@ export class MenSubcategoryService {
  Men_subcategory='https://vivah-backend-api.herokuapp.com/subcategory/bySubCategory/625aa8d0d7d40b24a87428fb';
   // Men_Product='https://vivah-backend.herokuapp.com/product/byProduct/625abdd5587e57bb3a74a3f5';
 
+
+ addToWishList = 'http://localhost:3000/wishList/add-to-wishlist';
+ wishList = 'http://localhost:3000/wishList/view-wish-list';
+  deleteWishes = "http://localhost:3000/wishList/delete-from-wishList";
+//  Men_Product='https://vivah-backend-api.herokuapp.com/product/product-list';
+//  order = "https://vivah-backend-api.herokuapp.com/order/place-order";
  addToCart = 'https://vivah-backend-api.herokuapp.com/cart/add-to-cart';
  removeToCart = 'https://vivah-backend-api.herokuapp.com/cart/remove-from-cart';
  view = "https://vivah-backend-api.herokuapp.com/cart/view-carts";
@@ -24,8 +30,13 @@ export class MenSubcategoryService {
 //  Men_Product='http://localhost:3000/product/product-list';
 //  order = "http://localhost:3000/order/place-order";
 //  deleteCart = "http://localhost:3000/cart/delete-carts";
+
   constructor(private http:HttpClient) { }
 
+  orderApi = 'http://localhost:3000/order/pay';
+  public createOrder(amount:any){
+   return this.http.post<any>(this.orderApi,{amount});
+  }
   subCategoryMen(){
     return this.http.get<any>(this.Men_subcategory);
   }
@@ -52,6 +63,12 @@ export class MenSubcategoryService {
       productId:product
     });
   }
+  removeWish(product:any){
+    return this.http.post<any>(this.deleteWishes,{
+      productId:product
+    });
+  }
+  
   orderPlaced(total:any,address:any,mobile:any,shipping:any,payment:any,orderItem:any){
     return this.http.post<any>(this.order,{
       total: total,
@@ -64,5 +81,13 @@ export class MenSubcategoryService {
   }
   delCart(){
     return this.http.post<any>(this.deleteCart,{});
+  }
+  addWishList(product:any){
+    return this.http.post<any>(this.addToWishList,{
+      productId:product
+    });
+  }
+  viewWishes(){
+    return this.http.get<any>(this.wishList);
   }
 }

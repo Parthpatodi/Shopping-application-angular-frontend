@@ -12,12 +12,31 @@
     margin:10 10 10 10px;
 
 }
+
+.hello {
+    background-color: #810000;
+  
+    border: none;
+    color: white;
+    padding-bottom: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Alegreya', serif;
+    padding: 7px 11px;
+    text-decoration: none;
+    margin-left: 25px;
+    position: relative;
+    bottom: 15px;
+  
+  }
+
 .modal-dialog{
 
 }
 .container{
     width:100%;
-
 }
 .wrapper{
     width:90%;
