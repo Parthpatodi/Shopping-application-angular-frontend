@@ -9,6 +9,8 @@
 .main-banner {
     height: 100%;
     width: 100%;
+    background-color: #f4dbdb;
+    background: cover;
 }
 
 .main-banner .banner {
@@ -29,10 +31,15 @@
     text-align: center;
     font-family: 'Alegreya', serif;
     font-size: 40px;
-    color: rgb(235, 156, 8);
+    color: #810000;
+    text-transform: capitalize;
+    font-weight: 600;
 }
 .carousel-inner{
     height: 440px;
+}
+.card-title{
+    font-size: 18px; text-align: center; font-family: 'Alegreya', serif; color:#192537;text-transform: capitalize;
 }
 
 
