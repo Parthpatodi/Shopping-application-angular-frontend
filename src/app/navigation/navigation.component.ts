@@ -9,7 +9,6 @@ import { SearchProductService } from '../search-product.service';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-
   constructor(private router:Router,private customerService:CustomerRegistrationService ,private search : SearchProductService) { }
    searchText:string = "";
    searchData:any[] = [];
