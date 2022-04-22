@@ -6,10 +6,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MenSubcategoryService {
   // Men_subcategory = 'https://vivah-backend.herokuapp.com/subcategory/subcategoryList';
-  product_details="http://localhost:3000/product/product-details/";
- kurtaPajama = "http://localhost:3000/product/byProduct/";
- Men_subcategory='http://localhost:3000/subcategory/bySubCategory/625aa8d0d7d40b24a87428fb';
+  product_details="https://vivah-backend-api.herokuapp.com/product/product-details/";
+ kurtaPajama = "https://vivah-backend-api.herokuapp.com/product/byProduct/";
+ Men_subcategory='https://vivah-backend-api.herokuapp.com/subcategory/bySubCategory/625aa8d0d7d40b24a87428fb';
   // Men_Product='https://vivah-backend.herokuapp.com/product/byProduct/625abdd5587e57bb3a74a3f5';
+
+//  addToCart = 'https://vivah-backend-api.herokuapp.com/cart/add-to-cart';
+//  removeToCart = 'https://vivah-backend-api.herokuapp.com/cart/remove-from-cart';
+//  view = "https://vivah-backend-api.herokuapp.com/cart/view-carts";
+//  Men_Product='https://vivah-backend-api.herokuapp.com/product/product-list';
+//  order = "https://vivah-backend-api.herokuapp.com/order/place-order";
+//  deleteCart = "https://vivah-backend-api.herokuapp.com/cart/delete-carts/";
+
  addToCart = 'http://localhost:3000/cart/add-to-cart';
  removeToCart = 'http://localhost:3000/cart/remove-from-cart';
  view = "http://localhost:3000/cart/view-carts";
@@ -52,7 +60,6 @@ export class MenSubcategoryService {
       shipping: shipping,
       payment: payment,
       orderList: orderItem
-    
     });
   }
   delCart(){
