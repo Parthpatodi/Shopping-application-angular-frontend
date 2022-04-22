@@ -20,6 +20,8 @@ export class NavigationComponent implements OnInit {
   isLoggedIn():boolean{
     return this.customerService.checkToken();
   }
-
+  cartCall(){
+    this.router.navigate(['add-cart']);
+  }
    
 }
