@@ -23,5 +23,7 @@ export class NavigationComponent implements OnInit {
     return this.customerService.checkToken();
   }
 
-
+  cartCall(){
+    this.router.navigate(['add-cart']);
+  }
 }

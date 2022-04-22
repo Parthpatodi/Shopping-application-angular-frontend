@@ -15,7 +15,7 @@ export class MenSubcategoryService {
  view = "http://localhost:3000/cart/view-carts";
  Men_Product='http://localhost:3000/product/product-list';
  order = "http://localhost:3000/order/place-order";
- deleteCart = "http://localhost:3000/cart/delete-carts/";
+ deleteCart = "http://localhost:3000/cart/delete-carts";
   constructor(private http:HttpClient) { }
 
   subCategoryMen(){
