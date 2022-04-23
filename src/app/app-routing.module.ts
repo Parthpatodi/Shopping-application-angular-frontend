@@ -21,7 +21,7 @@ const routes: Routes = [
  {path:'signUp',component:SignupComponent},
  {path:'app-about-us',component:AboutUsComponent},
  {path:'men-product',component:MenProductComponent},
- {path:'kurta-pajama/:id',component:MenKurtaPajamaComponent},
+ {path:'product/:id',component:MenKurtaPajamaComponent},
  {path:'cart-product-view/:id',component:WomenProductviewComponent,canActivate:[AuthGuard]},
  {path:'add-cart',component:CartComponent,canActivate:[AuthGuard]},
  {path:'search-product',component:SearchProductComponent}

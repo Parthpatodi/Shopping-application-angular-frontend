@@ -27,6 +27,7 @@ export class MenKurtaPajamaComponent implements OnInit {
       console.log(this.check[i]);
     }
 
+    
   }
   add(id:any){
     this.router.navigate(['cart-product-view',id]);
@@ -39,7 +40,7 @@ export class MenKurtaPajamaComponent implements OnInit {
     if(this.isLoggedIn()){
     
     if(event.textContent == "Add to cart"){
-      alert("Add to cart Tp remove to cart change");
+      alert("Add to cart To remove to cart change");
       this.menService.addCart(id).subscribe(data=>{
             alert("add to cart");
       event.textContent = "Remove cart";
