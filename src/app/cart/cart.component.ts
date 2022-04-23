@@ -18,15 +18,17 @@ export class CartComponent implements OnInit {
   shipping:any='';
   payment:any='';
   orderItem:any='';
+  sum:number=0;
   constructor(private menService:MenSubcategoryService,private router:Router) {
 
    }
 
   ngOnInit(): void {
     this.menService.viewCart().subscribe(data => {
-      alert("result"+data);
-      console.log(data);
       this.product = data;
+       for(let i=0;i<this.product.productList.length;i++){
+         this.sum = this.sum + this.product.productList[i].productPrice;
+       }
       localStorage.setItem('order-item', JSON.stringify(this.product.productList));
     })
   }
@@ -36,7 +38,6 @@ export class CartComponent implements OnInit {
    this.menService.createOrder(this.amount).subscribe(data=>{
      console.log(data.id);
      console.log(data);
-     alert("first api call");
      var options = {
       "key": "rzp_test_MqoJug1nXNqVws", // Enter the Key ID generated from the Dashboard
       "amount": "10000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -68,7 +69,7 @@ export class CartComponent implements OnInit {
   addToCart(id:any){
 
     this.menService.addCart(id).subscribe(data => {
-      alert(data);
+      alert("add to cart");
     })
   }
   delete(id:any,index:number){
@@ -79,24 +80,21 @@ export class CartComponent implements OnInit {
      })
 
   }
-  edit(id:any,index:number){
-    //this.router.navigate(['add-cart']);
-  }
+getData(num:any,price:any){
+   this.total = num*1 * price *1;
+   alert(this.total);
+}
   checkOut(){
     this.orderItem = localStorage.getItem('order-item');
-    for(var i=0;i<this.orderItem.length;i++){
-      this.total = this.total + this.orderItem[i].productPrice;
-    }
-     alert(this.total);
- console.log(this.total);
-     this.menService.orderPlaced(this.total,this.address,this.mobile,this.shipping,this.payment,this.orderItem).subscribe(data=>{
+ console.log("sum  "+this.sum);
+     this.menService.orderPlaced(this.sum,this.address,this.mobile,this.shipping,this.payment,this.orderItem).subscribe(data=>{
       alert("order placed");
-
       this.menService.delCart().subscribe(data=>{
         alert("cart deleted");
       })
      })
      this.onPay();
      this.router.navigate(['add-cart']);
+    }
   }
-}
+
