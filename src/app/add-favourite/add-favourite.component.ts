@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MenSubcategoryService} from '../men-subcategory.service';
 import { Router} from '@angular/router';
+
+import { CustomerRegistrationService} from  '../customer-registration.service' ;
 @Component({
   selector: 'app-add-favourite',
   templateUrl: './add-favourite.component.html',
@@ -17,7 +19,7 @@ export class AddFavouriteComponent implements OnInit {
   shipping:any='';
   payment:any='';
   orderItem:any='';
-  constructor(private menService:MenSubcategoryService,private router:Router) { }
+  constructor(private customerService:CustomerRegistrationService,private menService:MenSubcategoryService,private router:Router) { }
 
   ngOnInit(): void {
       this.menService.viewWishes().subscribe(data => {
@@ -35,4 +37,26 @@ export class AddFavouriteComponent implements OnInit {
      })
  
   }
+  isLoggedIn():boolean{
+    return this.customerService.checkToken();
+  }
+  addToCart(id:any,index:number){
+
+    if(this.isLoggedIn()){
+      this.menService.addCart(id).subscribe(data=>{
+            alert("add to cart");
+        console.log(data);
+        this.menService.removeWish(id).subscribe(data=>{
+          alert("remove to wish");
+          this.product.productList.splice(index,1);
+          this.router.navigate(['add-favourite']);
+         })
+     
+      })
+    }
+  else{
+    alert("First login required");
+    this.router.navigate(['signIn']);
+  }
+}
 }

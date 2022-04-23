@@ -12,8 +12,9 @@
         <th scope="col">price</th>
         <th scope="col">Description</th>
         <td scope="col-2">Quantity</td>
+        <td scope="col-2">Total</td>
         <th scope="col">Remove</th>
-        <th scope="col">Delete</th>
+        
       </tr>
     </thead>
     <tbody>
@@ -23,13 +24,15 @@
         <td>{{item.productName}}</td>
         <td>{{item.productPrice}}</td>
         <td>{{item.productDescription}}</td>
-        <td><input [(ngModel)]="total" type="number" placeholder="1"  min="1" max="5" ></td>
-        <td><button (click)="edit(item._id,i)" class="btn btn-primary">Edit</button></td>
+        <td><input #num (keyup.enter)="getData(num.value,item.productPrice)" [(ngModel)]="total" type="number" placeholder="1"  min="1" max="5" ></td>
+        <td [(ngModel)]="sum">{{total * item.productPrice}}</td>
+      
         <td><button (click)="delete(item._id,i)" class="btn btn-danger">Remove</button></td>
       </tr>
 
     </tbody>
   </table>
+
   <div class="row justify-content-center p-5">
     <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Place Order</button>
 </div>
@@ -49,6 +52,7 @@
         <div class="modal-body">
             <div class="form-group">
                 <label>Address</label>
+
                 <textarea [(ngModel)]="address"  id="address" required="true" class="form-control"></textarea>
             </div>
             <div class="form-group">
