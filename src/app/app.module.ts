@@ -25,6 +25,7 @@ import { ApiService } from './api.service';
 import { SearchProductComponent } from './search-product/search-product.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AddFavouriteComponent } from './add-favourite/add-favourite.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { AddFavouriteComponent } from './add-favourite/add-favourite.component';
     MenKurtaPajamaComponent,
     SearchProductComponent,
     PageNotFoundComponent,
-    AddFavouriteComponent
+    AddFavouriteComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
