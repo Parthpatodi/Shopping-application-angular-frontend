@@ -16,7 +16,7 @@ export class MenSubcategoryService {
   deleteWishes = "https://vivah-backend-api.herokuapp.com/wishList/delete-from-wishList";
 //  Men_Product='https://vivah-backend-api.herokuapp.com/product/product-list';
 //  order = "https://vivah-backend-api.herokuapp.com/order/place-order";
- addToCart = 'https://vivah-backend-api.herokuapp.com/cart/add-to-cart';  
+ addToCart = 'https://vivah-backend-api.herokuapp.com/cart/add-to-cart';
  removeToCart = 'https://vivah-backend-api.herokuapp.com/cart/remove-from-cart';
  view = "https://vivah-backend-api.herokuapp.com/cart/view-carts";
  Men_Product='https://vivah-backend-api.herokuapp.com/product/product-list';
