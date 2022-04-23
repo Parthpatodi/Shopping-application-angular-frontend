@@ -12,6 +12,8 @@ import {  MenKurtaPajamaComponent} from './men-kurta-pajama/men-kurta-pajama.com
 import {WomenProductviewComponent} from './women-productview/women-productview.component';
 import { CartComponent} from './cart/cart.component';
 import { SearchProductComponent } from './search-product/search-product.component';
+import { AddFavouriteComponent} from './add-favourite/add-favourite.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 const routes: Routes = [
  {path:'',component: MainHomeComponent},
  {path:'main-home',component: MainHomeComponent},
@@ -22,9 +24,11 @@ const routes: Routes = [
  {path:'app-about-us',component:AboutUsComponent},
  {path:'men-product',component:MenProductComponent},
  {path:'product/:id',component:MenKurtaPajamaComponent},
- {path:'cart-product-view/:id',component:WomenProductviewComponent,canActivate:[AuthGuard]},
+ {path:'cart-product-view/:id',component:WomenProductviewComponent},
  {path:'add-cart',component:CartComponent,canActivate:[AuthGuard]},
- {path:'search-product',component:SearchProductComponent}
+ {path:'search-product',component:SearchProductComponent},
+ {path:'add-favourite',component:AddFavouriteComponent},
+ {path:'**' , component:PageNotFoundComponent}
 ];
 
 

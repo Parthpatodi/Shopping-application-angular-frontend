@@ -10,18 +10,15 @@
     </div>
   </div>
 
-
-
   <div class="row">
     <div *ngFor="let product of searchData" class="col-lg-3 col-md-5 mt-5 mb-3">
         <div class="card h-100">
             <img (click)="viewProduct(product._id)" src="{{product.productImageFront}}" class="card-img-top" height="500px" />
             <div class="card-body">
-                <h4 class="card-title"
-                    style="font-size: 18px; text-align: center; font-family: philosopherregular; color:#192537;">
+                <h4 class="card-title">
                     {{product.productName}}
                 </h4>
-                <h4 class="price"> Rs. {{product.productPrice}}</h4><br>
+                <h4 class="card-price"> 	&#8377; {{product.productPrice}}</h4><br>
             </div>
             <input type="hidden" name="id" value="{{product._id}}">
         </div>

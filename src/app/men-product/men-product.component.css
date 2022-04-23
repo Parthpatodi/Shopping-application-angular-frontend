@@ -11,8 +11,9 @@
     width: 100%;
 }
 .card:hover{
-    box-shadow: 0 0 10px gold;
-  }
+  cursor:pointer;
+box-shadow: 0 0 10px black;
+}
 .main-banner .banner {
     height: 500px;
     width: 100%;

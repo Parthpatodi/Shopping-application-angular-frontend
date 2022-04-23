@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CustomerRegistrationService {
-  signIN = 'http://localhost:3000/user/signin';
+  signIN = 'https://vivah-backend-api.herokuapp.com/user/signin';
  // sign = 'https://vivah-backend.herokuapp.com/user/signup';
  signUP = 'https://vivah-backend-api.herokuapp.com/user/signup';
   constructor(private http: HttpClient) { }

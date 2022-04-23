@@ -6,14 +6,11 @@
           <div class="product-box ">
             <div class="all-images">
               <div class="small-images">
-
                 <img #first (click)="imageChange(item.productImageFront)" [src]="item.productImageFront">
                 <img #first (click)="imageChange(item.productImageBack)" [src]="item.productImageBack">
                 <img #first (click)="imageChange(item.productImageLeft)" [src]="item.productImageLeft">
                 <img #first (click)="imageChange(item.productImageRight)" [src]="item.productImageRight">
-
               </div>
-
               <div class="main-images">
                 <img #mainImg id="mainImage" src="{{frontImage}}">
               </div>
@@ -28,49 +25,24 @@
       <div class="card">
         <div class="product-content">
           <p class="_p-name"> {{item.productName}}</p>
-          <div class="_p-price-box">
-           <h4 class="price"> Price:</h4>
-            <span> Rs. {{item.productPrice}}</span>
-          </div>
 
+           <h4 class="price">&#8377; {{item.productPrice}}.00</h4>
+ <br>
           <div class="_p-features"> Description:
             <span> {{item.productDescription}}</span>
           </div>
+          <br>
           <form action="" method="post" accept-charset="utf-8">
             <ul class="spe_ul"></ul>
             <div class="_p-qty-and-cart">
               <div class="_p-add-cart">
-                <button (click)="buyNow()" class="btn-theme btn buy-btn" data-bs-toggle="modal"
-                  data-bs-target="#exampleModal" tabindex="0">
+                <button (click)="onPay()" class="btn hello" >
                   Buy Now
                 </button>
-
+                <button (click)="addToCart(item._id,$event.target)" class="btn hello">Add To Cart</button>
                 <input type="hidden" name="pid" value="18" />
                 <input type="hidden" name="price" value="850" />
                 <input type="hidden" name="url" value="" />
               </div>
             </div>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-       
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        
-         <div class="container">
-           <label>Address</label>
-            <input type="text" class="form-control" placeholder="Enter address"/>
-         </div>
-  
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
 

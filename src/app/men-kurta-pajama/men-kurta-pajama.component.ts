@@ -39,47 +39,52 @@ export class MenKurtaPajamaComponent implements OnInit {
     console.log(event);
     if(this.isLoggedIn()){
     
-    if(event.textContent == "Add to cart"){
+    if(event.textContent == "Add To Cart"){
       alert("Add to cart To remove to cart change");
       this.menService.addCart(id).subscribe(data=>{
             alert("add to cart");
       event.textContent = "Remove cart";
         console.log(data);
         this.check = true;
-        // for(index=0; index< result.length; index++)
-        // result[index].productQty = 1;
-     // localStorage.setItem("item-list",JSON.stringify(data.productList[this.i++].productName));
-
-    //  localStorage.setItem("productItem", JSON.stringify(this.names));
       })
     }
     else{
        this.menService.removeCart(id).subscribe(data=>{
      alert("remove to cart");
-       event.textContent = "Add to cart";
+       event.textContent = "Add To Cart";
        })
     }
-      //       this.names[this.i++] = id;
-      //       alert("add from cart");
-      //       event.disabled = true;
-      //       localStorage.setItem("productItem", JSON.stringify(this.names));
-      //     event.textContent = "Remove to cart
-    // this.menService.addCart(id).subscribe(data=>{
-    //        alert("add to cart");// })
-
-  //   if(this.isLoggedIn()){
-  //     if(event.textContent == "Add to cart"){
-  //       this.names[this.i++] = id;
-  //       alert("add from cart");
-  //       event.disabled = true;
-  //       localStorage.setItem("productItem", JSON.stringify(this.names));
-  //     event.textContent = "Remove to cart"
-   
-   
   }
   else{
     alert("First login required");
     this.router.navigate(['signIn']);
   }
 }
+addToWishList(id:any,event: any){
+  console.log(event);
+  if(this.isLoggedIn()){
+  
+  if(event.textContent == "Add To Wishlist"){
+    alert("Add to cart To remove to cart change");
+    this.menService.addWishList(id).subscribe(data=>{
+          alert("add to cart");
+    event.textContent = "Favourite";
+      console.log(data);
+      this.check = true;
+    })
+  }
+  else{
+     this.menService.removeCart(id).subscribe(data=>{
+   alert("remove to cart");
+     event.textContent = "Add To Wishlist";
+     })
+  }
+}
+else{
+  alert("First login required");
+  this.router.navigate(['signIn']);
+}
+}
+
+
 }

@@ -23,6 +23,8 @@ import {TokenService} from './token.service';
 import {  HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiService } from './api.service';
 import { SearchProductComponent } from './search-product/search-product.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AddFavouriteComponent } from './add-favourite/add-favourite.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { SearchProductComponent } from './search-product/search-product.componen
     AboutUsComponent,
     MenSuitComponent,
     MenKurtaPajamaComponent,
-    SearchProductComponent
+    SearchProductComponent,
+    PageNotFoundComponent,
+    AddFavouriteComponent
   ],
   imports: [
     BrowserModule,
