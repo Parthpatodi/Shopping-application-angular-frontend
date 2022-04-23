@@ -39,7 +39,7 @@ export class CartComponent implements OnInit {
      alert("first api call");
      var options = {
       "key": "rzp_test_MqoJug1nXNqVws", // Enter the Key ID generated from the Dashboard
-      "amount": "10000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      "amount": this.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       "currency": "INR",
       "name": "Acme Corp",
       "description": "Test Transaction",
@@ -54,7 +54,7 @@ export class CartComponent implements OnInit {
       "notes": {
           "address": "Razorpay Corporate Office"
       },
-      "theme": { 
+      "theme": {
           "color": "#3399cc"
       }
   };
