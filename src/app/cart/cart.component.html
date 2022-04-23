@@ -52,15 +52,16 @@
         <div class="modal-body">
             <div class="form-group">
                 <label>Address</label>
-                <textarea [(ngModel)]="address"  id="address" class="form-control" required></textarea>
+
+                <textarea [(ngModel)]="address"  id="address" required="true" class="form-control"></textarea>
             </div>
             <div class="form-group">
                 <label>Contact Number</label>
-                <input [(ngModel)]="mobile" type="text" id="contact" class="form-control" required/>
+                <input [(ngModel)]="mobile" type="text" id="contact" required="true" class="form-control"/>
             </div>
             <div class="form-group">
               <label>Email</label>
-              <input [(ngModel)]="email" type="email" id="email" class="form-control" required/>
+              <input [(ngModel)]="email" type="email" id="email" required="true" class="form-control"/>
           </div>
         </div>
         <div class="modal-footer">
