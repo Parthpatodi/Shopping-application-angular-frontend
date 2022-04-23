@@ -14,6 +14,7 @@ import { CartComponent} from './cart/cart.component';
 import { SearchProductComponent } from './search-product/search-product.component';
 import { AddFavouriteComponent} from './add-favourite/add-favourite.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {UserProfileComponent} from './user-profile/user-profile.component';
 const routes: Routes = [
  {path:'',component: MainHomeComponent},
  {path:'main-home',component: MainHomeComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
  {path:'add-cart',component:CartComponent,canActivate:[AuthGuard]},
  {path:'search-product',component:SearchProductComponent},
  {path:'add-favourite',component:AddFavouriteComponent},
+ {path:'user-profile',component:UserProfileComponent},
  {path:'**' , component:PageNotFoundComponent}
 ];
 
