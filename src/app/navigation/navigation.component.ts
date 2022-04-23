@@ -26,4 +26,5 @@ export class NavigationComponent implements OnInit {
   cartCall(){
     this.router.navigate(['add-cart']);
   }
+
 }

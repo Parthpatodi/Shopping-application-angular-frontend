@@ -11,10 +11,9 @@ export class MenSubcategoryService {
  Men_subcategory='https://vivah-backend-api.herokuapp.com/subcategory/bySubCategory/625aa8d0d7d40b24a87428fb';
   // Men_Product='https://vivah-backend.herokuapp.com/product/byProduct/625abdd5587e57bb3a74a3f5';
 
-
- addToWishList = 'http://localhost:3000/wishList/add-to-wishlist';
- wishList = 'http://localhost:3000/wishList/view-wish-list';
-  deleteWishes = "http://localhost:3000/wishList/delete-from-wishList";
+ addToWishList = 'https://vivah-backend-api.herokuapp.com/wishList/add-to-wishlist';
+ wishList = 'https://vivah-backend-api.herokuapp.com/wishList/view-wish-list';
+  deleteWishes = "https://vivah-backend-api.herokuapp.com/wishList/delete-from-wishList";
 //  Men_Product='https://vivah-backend-api.herokuapp.com/product/product-list';
 //  order = "https://vivah-backend-api.herokuapp.com/order/place-order";
  addToCart = 'https://vivah-backend-api.herokuapp.com/cart/add-to-cart';
@@ -23,6 +22,7 @@ export class MenSubcategoryService {
  Men_Product='https://vivah-backend-api.herokuapp.com/product/product-list';
  order = "https://vivah-backend-api.herokuapp.com/order/place-order";
  deleteCart = "https://vivah-backend-api.herokuapp.com/cart/delete-carts/";
+  orderApi = 'https://vivah-backend-api.herokuapp.com/order/pay';
 
 //  addToCart = 'http://localhost:3000/cart/add-to-cart';
 //  removeToCart = 'http://localhost:3000/cart/remove-from-cart';
@@ -33,7 +33,6 @@ export class MenSubcategoryService {
 
   constructor(private http:HttpClient) { }
 
-  orderApi = 'http://localhost:3000/order/pay';
   public createOrder(amount:any){
    return this.http.post<any>(this.orderApi,{amount});
   }
