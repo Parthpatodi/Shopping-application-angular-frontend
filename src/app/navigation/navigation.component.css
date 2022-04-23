@@ -11,12 +11,15 @@
     align-items:center;
     padding:20px;
    background-color: #810000;
-
+   /* top: 0;
+   bottom: 0; */
 }
 .nav-item{
     margin-right:50px;
 }
-
+nav.navbar.navbar-expand-lg.navbar-light.sticky-top {
+  padding: 7px;
+}
 .nav-link{
   font-size: 25px;
    font-weight:3ev;

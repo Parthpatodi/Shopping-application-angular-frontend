@@ -19,7 +19,7 @@ export class CartComponent implements OnInit {
   payment:any='';
   orderItem:any='';
   constructor(private menService:MenSubcategoryService,private router:Router) {
- 
+
    }
 
   ngOnInit(): void {
@@ -45,16 +45,16 @@ export class CartComponent implements OnInit {
       "description": "Test Transaction",
       "image": "https://example.com/your_logo",
       "order_id": data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      "callback_url": "http://localhost:3000/order/payment-status",
+      "callback_url": "https://vivah-backend-api.herokuapp.com/order/payment-status",
       "prefill": {
-          "name": "Devika Kushwah",
-          "email": "devikakushwah29@gmail.com",
-          "contact": "8770784399"
+          "name": "Parth Patodi",
+          "email": "patodiparth@gmail.com",
+          "contact": "6265812358"
       },
       "notes": {
           "address": "Razorpay Corporate Office"
       },
-      "theme": {
+      "theme": { 
           "color": "#3399cc"
       }
   };
@@ -66,7 +66,7 @@ export class CartComponent implements OnInit {
  }
 
   addToCart(id:any){
-    
+
     this.menService.addCart(id).subscribe(data => {
       alert(data);
     })
@@ -77,7 +77,7 @@ export class CartComponent implements OnInit {
       this.product.productList.splice(index,1);
       this.router.navigate(['add-cart']);
      })
- 
+
   }
   edit(id:any,index:number){
     //this.router.navigate(['add-cart']);
@@ -90,7 +90,7 @@ export class CartComponent implements OnInit {
      alert(this.total);
  console.log(this.total);
      this.menService.orderPlaced(this.total,this.address,this.mobile,this.shipping,this.payment,this.orderItem).subscribe(data=>{
-      alert("order placed"); 
+      alert("order placed");
 
       this.menService.delCart().subscribe(data=>{
         alert("cart deleted");
