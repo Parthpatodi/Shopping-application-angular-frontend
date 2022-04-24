@@ -67,10 +67,9 @@ export class CartComponent implements OnInit {
  }
 
   addToCart(id:any){
-
-    this.menService.addCart(id).subscribe(data => {
+      this.menService.addCart(id).subscribe(data => {
       alert("add to cart");
-    })
+    });
   }
   delete(id:any,index:number){
     this.menService.removeCart(id).subscribe(data=>{
@@ -91,9 +90,10 @@ getData(num:any,price:any){
       alert("order placed");
       this.menService.delCart().subscribe(data=>{
         alert("cart deleted");
+        this.onPay();
       })
      })
-     this.onPay();
+
      this.router.navigate(['add-cart']);
     }
   }
