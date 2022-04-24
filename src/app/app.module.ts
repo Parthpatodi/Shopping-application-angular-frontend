@@ -26,6 +26,7 @@ import { SearchProductComponent } from './search-product/search-product.componen
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AddFavouriteComponent } from './add-favourite/add-favourite.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    SocialLoginModule
+    SocialLoginModule,
+    NgxImageZoomModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
