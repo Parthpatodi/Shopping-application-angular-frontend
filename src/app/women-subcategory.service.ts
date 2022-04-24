@@ -12,12 +12,27 @@ export class WomenSubcategoryService {
   //women_subCategory = 'https://vivah-backend.herokuapp.com/subcategory/subcategoryList';
   constructor(private http:HttpClient) { }
   id = '625aa923d7d40b24a87428fc';
+
+  public responseCache = new Map();
+
   subCategoryWomen(){
-    return this.http.get<any>(this.women_subCategory);
+    const womenCategoryCache = this.responseCache.get(this.women_subCategory);
+    if(womenCategoryCache){
+      return womenCategoryCache;
+    }
+    const response = this.http.get<any>(this.women_subCategory);
+    response.subscribe(womanCategory => this.responseCache.set(this.women_subCategory,womanCategory));
+    return response; 
   }
 
   subCategory(){
-    return this.http.get<any>(this.allCategory);
+    const subCategoryCache = this.responseCache.get(this.allCategory);
+    if(subCategoryCache){
+      return subCategoryCache;
+    }
+    const response = this.http.get<any>(this.allCategory);
+    response.subscribe(allCategories => this.responseCache.set(this.allCategory,allCategories));
+    return response;
   }
 
 }
