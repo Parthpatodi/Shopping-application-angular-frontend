@@ -11,7 +11,7 @@ export class WomenSubcategoryComponent implements OnInit {
   constructor(private womenSub: WomenSubcategoryService,private router:Router) { }
 
   ngOnInit(): void {
-    this.womenSub.subCategoryWomen().subscribe(data=>{
+    this.womenSub.subCategoryWomen().subscribe((data: any)=>{
     this.firstimage = data;
     })
   }

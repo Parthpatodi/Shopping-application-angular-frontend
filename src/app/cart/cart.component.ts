@@ -24,7 +24,7 @@ export class CartComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.menService.viewCart().subscribe(data => {
+    this.menService.viewCart().subscribe((data: any) => {
       this.product = data;
        for(let i=0;i<this.product.productList.length;i++){
          this.sum = this.sum + this.product.productList[i].productPrice;

@@ -11,7 +11,7 @@ export class MainHomeComponent implements OnInit {
   constructor(private womenService:WomenSubcategoryService,private router:Router) { }
 
   ngOnInit(): void {
-    this.womenService.subCategory().subscribe(data=>{
+    this.womenService.subCategory().subscribe((data: any)=>{
       this.men = data;
     });
   }
