@@ -1,48 +1,98 @@
 <div class="banner">
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="2000">
-          <img src="../../assets/background-images/lehenga-bg.webp" alt="Los Angeles" class="" style="width:100%;">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="../../assets/background-images/sherwani-man-bg.webp" alt="Chicago" class="d-block" style="width:100%">
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img src="../../assets/background-images/salwar-suit-bg.webp" alt="New York" class="d-block" style="width:100%">
-        </div>
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img src="../../assets/background-images/lehenga-bg.webp" alt="Los Angeles" class="" style="width:100%;">
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="../../assets/background-images/sherwani-man-bg.webp" alt="Chicago" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="../../assets/background-images/salwar-suit-bg.webp" alt="New York" class="d-block" style="width:100%">
+      </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="main-content">
+    <p>Weddings in India are always high energy, colourful affairs. From the dazzling decorations to the varieties in
+      food, every aspect of the wedding is geared to provide a spectacle of joy and celebration for the guests. Indian
+      wedding dresses also reflect the atmosphere of cheer and enjoyment and are one of the most interesting aspects of
+      the ceremony. From exceptional clothing worn by the bride to the regal garment of the groom, from the stylish
+      trends donned by the bridesmaids to the vibrant ethnic dresses of the guests, a fashion lover will find plenty to
+      examine and appreciate at an Indian wedding.On the other hand, in urban centres couples and their families are
+      increasingly turning towards more glamorous and modern themes for the dcor which also influences the kind of
+      wedding clothes worn. Thus, there are a plethora of Indian wedding dresses to choose for men as well as women.</p>
+
+
+  </div>
 
   <div class="container">
     <div class="text">
-      <h4></h4>
-        <h1>Our Top Trending Collection</h1>
+
+      <h1>Our Top Trending </h1><br>
+
 
     </div>
     <div class="row">
-        <div *ngFor="let item of men" class="col-lg-3 col-md-5 mt-5 mb-3">
-            <div  class="card h-100">
-                <img (click)="viewProduct(item._id)"  src="{{item.productImageFront}}" class="card-img-top" height="500px" />
-                <div class="card-body">
-                    <h4 class="card-title">
-                        {{item.productName}}
-                    </h4>
-                    <h4 class="card-price">
-                      &#8377; {{item.productPrice}}
-                    </h4>
-                </div>
-                <input type="hidden" name="id" value="{{item._id}}">
-            </div>
+      <div *ngFor="let item of men" class="col-lg-3 col-md-5 mt-5 mb-3">
+        <div class="card h-100">
+          <img (click)="viewProduct(item._id)" src="{{item.productImageFront}}" class="card-img-top" height="500px" />
+          <div class="card-body">
+            <h4 class="card-title">
+              {{item.productName}}
+            </h4>
+            <h4 class="card-price">
+              &#8377; {{item.productPrice}}
+            </h4>
+          </div>
+          <input type="hidden" name="id" value="{{item._id}}">
         </div>
-    </div>
-</div>
-</div>
+      </div>
 
+      <div class="cover">
+        <h1> Our Collections....</h1>
+
+        <div class="column">
+        
+          <div class="wrapper">
+            <img src="../../assets/images/ranveer_shervani.jpg" style="width:90%">
+          </div>
+          <div class="wrapper">
+            <img src="../../assets/images/suit2.jpg" style="width:90%;">
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="wrapper">
+            <img src="../../assets/images/kurta-pajama3.jpg " style="width:100%;">
+          </div>
+          <div class="wrapper">
+            <img src="../../assets/images/suit3.jpg" style="width:80%">
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="wrapper">
+            <img src="../../assets/images/lehenga3.jpg " style="width:90%">
+          </div>
+          <div class="wrapper">
+            <img src="../../assets/images/saree2.jpg" style="width:90%">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
