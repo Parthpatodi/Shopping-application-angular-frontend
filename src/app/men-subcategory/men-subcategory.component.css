@@ -60,6 +60,25 @@ box-shadow: 0 0 10px black;
 
 
  }
+ .main-content p{
+    margin: 20px;
+    text-align: center;
+    font-family: philosopher;
+    font-size: 15px;
+    color:black;
+   padding:139px ;
+ }
+ .main-content h1{
+    text-align:center;
+    font-family: 'Alegreya', serif;
+   font-size: 50px;
+   color: #810000;
+   text-transform: capitalize;
+    padding-top:100px;
+
+
+     
+ }
 
 /* @media only screen and (max-width:800px) {
     .banner {
