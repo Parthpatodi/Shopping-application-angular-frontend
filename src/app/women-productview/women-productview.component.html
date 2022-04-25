@@ -41,11 +41,10 @@
             <span> {{item.productDescription}}</span>
           </div>
           <br>
-          <form action="" method="post" accept-charset="utf-8">
             <ul class="spe_ul"></ul>
             <div class="_p-qty-and-cart">
               <div class="_p-add-cart">
-                <button (click)="onPay()" class="btn hello" >Buy Now</button>
+                <button (click)="onPay(item.productPrice)" class="btn hello" >Buy Now</button>
                 <button (click)="addToCart(item._id,$event.target)" class="btn hello">Add To Cart</button>
                 <input type="hidden" name="pid" value="18" />
                 <input type="hidden" name="price" value="850" />

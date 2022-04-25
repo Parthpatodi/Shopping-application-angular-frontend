@@ -13,6 +13,7 @@ export class MenKurtaPajamaComponent implements OnInit {
   names:any = [];
   i =0;
   id:any =0;
+  check1?:any;
   check?:any;
   toggle:any='';
   highToLow:any = '';
@@ -21,7 +22,7 @@ export class MenKurtaPajamaComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.activatedRouter.snapshot.paramMap.get('id');
-    
+
     this.menService.product_kurtaP(this.id).subscribe(data=>{
       this.image = data;
     })
@@ -30,12 +31,12 @@ export class MenKurtaPajamaComponent implements OnInit {
       console.log(this.check[i]);
     }
 
-    
+
   }
   sortPriceWithHigh(){
     this.menService.sortHighToLow(this.id).subscribe(data=>{
       console.log(data);
-       alert(data);
+      //  alert(data);
        this.highToLow = data;
     })
    }
@@ -54,13 +55,16 @@ export class MenKurtaPajamaComponent implements OnInit {
   addToCart(id:any,event: any){
     console.log(event);
     if(this.isLoggedIn()){
-    
+      // this.check1 = localStorage.getItem('addCart');
+      // console.log(this.check1);
+      // if(id==this.check1){
+
     if(event.textContent == "Add To Cart"){
       this.menService.addCart(id).subscribe(data=>{
             alert("add to cart");
+            localStorage.setItem("addCart",data._id)
       event.textContent = "Remove cart";
         console.log(data);
-        this.check = true;
       })
     }
     else{
@@ -70,6 +74,10 @@ export class MenKurtaPajamaComponent implements OnInit {
        })
     }
   }
+  // else{
+  //   alert("already added");
+  // }
+
   else{
     alert("First login required");
     this.router.navigate(['signIn']);
@@ -78,7 +86,7 @@ export class MenKurtaPajamaComponent implements OnInit {
 addToWishList(id:any,event: any){
   console.log(event);
   if(this.isLoggedIn()){
-  
+
   if(event.textContent == "Add To Wishlist"){
     alert("Add to cart To remove to cart change");
     this.menService.addWishList(id).subscribe(data=>{

@@ -14,13 +14,12 @@ export class UserProfileComponent implements OnInit {
   mobile:string = '';
   order_history = '';
   constructor(private womenService: WomenSubcategoryService,private router:Router) { }
-   
+
   ngOnInit(): void {
     this.womenService.profile().subscribe(result=>{
-      
+
      console.log(result);
      this.data = result;
-     alert(result);
     })
   }
   orderHistory(){
