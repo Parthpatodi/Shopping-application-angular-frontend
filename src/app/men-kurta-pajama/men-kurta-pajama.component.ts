@@ -42,7 +42,6 @@ export class MenKurtaPajamaComponent implements OnInit {
    sortWithSort(){
      this.menService.sortingWithPrice(this.id).subscribe(data=>{
        console.log(data);
-        alert(data);
         this.product = data;
      })
    }
@@ -57,7 +56,6 @@ export class MenKurtaPajamaComponent implements OnInit {
     if(this.isLoggedIn()){
     
     if(event.textContent == "Add To Cart"){
-      alert("Add to cart To remove to cart change");
       this.menService.addCart(id).subscribe(data=>{
             alert("add to cart");
       event.textContent = "Remove cart";
