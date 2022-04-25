@@ -13,21 +13,30 @@
               </div>
               <div class="main-images">
                 <img #mainImg id="mainImage" src="{{frontImage}}">
+                <!-- <lib-ngx-image-zoom class="fix"
+                [thumbImage]=frontImage
+                [fullImage]=frontImage
+                [magnification]="0.5"
+                [enableScrollZoom]="true"
+                [enableLens]="true"
+                [lensWidth]="1500"
+                [lensHeight]="1500"
+                id="mainImage"
+                #mainImage
+            ></lib-ngx-image-zoom> -->
+
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="col-md-6">
       <div class="card">
         <div class="product-content">
           <p class="_p-name"> {{item.productName}}</p>
-
-           <h4 class="price">&#8377; {{item.productPrice}}.00</h4>
- <br>
+           <h4 class="price">&#8377; {{item.productPrice}}.00</h4><br>
           <div class="_p-features"> Description:
             <span> {{item.productDescription}}</span>
           </div>
@@ -36,9 +45,7 @@
             <ul class="spe_ul"></ul>
             <div class="_p-qty-and-cart">
               <div class="_p-add-cart">
-                <button (click)="onPay()" class="btn hello" >
-                  Buy Now
-                </button>
+                <button (click)="onPay()" class="btn hello" >Buy Now</button>
                 <button (click)="addToCart(item._id,$event.target)" class="btn hello">Add To Cart</button>
                 <input type="hidden" name="pid" value="18" />
                 <input type="hidden" name="price" value="850" />

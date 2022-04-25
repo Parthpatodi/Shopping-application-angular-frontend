@@ -69,7 +69,7 @@ export class WomenProductviewComponent implements OnInit {
 
   ngOnInit(): void {
     let id = this.activatedRouter.snapshot.paramMap.get('id');
-    this.menService.product_detail(id).subscribe(data=>{
+    this.menService.product_detail(id).subscribe((data: { productImageFront: any; productImageBack: any; productImageLeft: any; productImageRight: any; })=>{
       this.item = data;
       this.frontImage = data.productImageFront;
       this.backImage = data.productImageBack;
@@ -98,7 +98,7 @@ export class WomenProductviewComponent implements OnInit {
   addToCart(id:any,event: any){
     console.log(event);
     if(this.isLoggedIn()){
-    
+
     if(event.textContent == "Add To Cart"){
       alert("Add to cart Tp remove to cart change");
       this.menService.addCart(id).subscribe(data=>{

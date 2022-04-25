@@ -14,7 +14,7 @@
         <td scope="col-2">Quantity</td>
         <td scope="col-2">Total</td>
         <th scope="col">Remove</th>
-        
+
       </tr>
     </thead>
     <tbody>
@@ -27,7 +27,7 @@
         
         <td><input #num (change)="getData(num.value,item.productPrice)" [(ngModel)]="total" type="number" placeholder="1"  min="1" max="5" ></td>
         <td [(ngModel)]="sum">{{total * item.productPrice}}</td>
-      
+
         <td><button (click)="delete(item._id,i)" class="btn btn-danger">Remove</button></td>
       </tr>
 

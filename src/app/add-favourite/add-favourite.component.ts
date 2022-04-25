@@ -22,7 +22,7 @@ export class AddFavouriteComponent implements OnInit {
   constructor(private customerService:CustomerRegistrationService,private menService:MenSubcategoryService,private router:Router) { }
 
   ngOnInit(): void {
-      this.menService.viewWishes().subscribe(data => {
+      this.menService.viewWishes().subscribe((data: any) => {
         alert("result"+data);
         console.log(data);
         this.product = data;
