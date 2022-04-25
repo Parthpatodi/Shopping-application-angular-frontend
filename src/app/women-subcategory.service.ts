@@ -10,6 +10,9 @@ export class WomenSubcategoryService {
   allCategory = 'https://vivah-backend-api.herokuapp.com/product/sort';
   //women_subCategory='https://vivah-backend.herokuapp.com/subcategory/bySubCategory/625aa923d7d40b24a87428fc'
   //women_subCategory = 'https://vivah-backend.herokuapp.com/subcategory/subcategoryList';
+  view_Profile = "http://localhost:3000/user/view-profile";
+   edit_Profile =  "http://localhost:3000/user/edit-user";
+   order = "http://localhost:3000/order/order-view";
   constructor(private http:HttpClient) { }
   id = '625aa923d7d40b24a87428fc';
 
@@ -33,6 +36,20 @@ export class WomenSubcategoryService {
     const response = this.http.get<any>(this.allCategory);
     response.subscribe(allCategories => this.responseCache.set(this.allCategory,allCategories));
     return response;
+  }
+  profile(){
+    return this.http.get<any>(this.view_Profile);
+  }
+  editProfile(name:any,email:any,address:any,mobile:any){
+    return this.http.post<any>(this.edit_Profile,{
+      name:name,
+      email:email,
+      address:address,
+      mobile:mobile
+    });
+  }
+  orderhist(){
+    return this.http.get<any>(this.order);
   }
 
 }

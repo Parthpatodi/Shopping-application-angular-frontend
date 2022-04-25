@@ -39,7 +39,7 @@
           <a *ngIf='isLoggedIn()' (click)="signOut()" class="nav-link active" aria-current="page">SignOut</a>
         </li>
         <li class="nav-item">
-          <a routerLink="user-profile" class="nav-link" aria-current="page" href="#"><i style="color: #ffbe41;" class="fa fa-user-circle" aria-hidden="true" ></i></a>
+          <a *ngIf='isLoggedIn()'  routerLink="user-profile" class="nav-link" aria-current="page" href="#"><i style="color: #ffbe41;" class="fa fa-user-circle" aria-hidden="true" ></i></a>
         </li>
       </ul>
         </div>

@@ -12,14 +12,17 @@ export class MenKurtaPajamaComponent implements OnInit {
   image:any = '';
   names:any = [];
   i =0;
+  id:any =0;
   check?:any;
   toggle:any='';
+  highToLow:any = '';
+  product:any = '';
   constructor(private customerService:CustomerRegistrationService,private menService:MenSubcategoryService,private activatedRouter:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
-    let id = this.activatedRouter.snapshot.paramMap.get('id');
+    this.id = this.activatedRouter.snapshot.paramMap.get('id');
     
-    this.menService.product_kurtaP(id).subscribe(data=>{
+    this.menService.product_kurtaP(this.id).subscribe(data=>{
       this.image = data;
     })
     this.check = JSON.parse(localStorage.getItem('productItem') || '[]');
@@ -29,6 +32,20 @@ export class MenKurtaPajamaComponent implements OnInit {
 
     
   }
+  sortPriceWithHigh(){
+    this.menService.sortHighToLow(this.id).subscribe(data=>{
+      console.log(data);
+       alert(data);
+       this.highToLow = data;
+    })
+   }
+   sortWithSort(){
+     this.menService.sortingWithPrice(this.id).subscribe(data=>{
+       console.log(data);
+        alert(data);
+        this.product = data;
+     })
+   }
   add(id:any){
     this.router.navigate(['cart-product-view',id]);
   }

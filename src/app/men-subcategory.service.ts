@@ -13,7 +13,7 @@ export class MenSubcategoryService {
   // Men_Product='https://vivah-backend.herokuapp.com/product/byProduct/625abdd5587e57bb3a74a3f5';
 
  addToWishList = 'https://vivah-backend-api.herokuapp.com/wishList/add-to-wishlist';
- wishList = 'https://vivah-backend-api.herokuapp.com/wishList/view-wish-list';
+ wishList = 'http://localhost:3000/wishList/view-wish-list';
   deleteWishes = "https://vivah-backend-api.herokuapp.com/wishList/delete-from-wishList";
 //  Men_Product='https://vivah-backend-api.herokuapp.com/product/product-list';
 //  order = "https://vivah-backend-api.herokuapp.com/order/place-order";
@@ -26,6 +26,8 @@ export class MenSubcategoryService {
   orderApi = 'https://vivah-backend-api.herokuapp.com/order/pay';
 
 
+  sortPrice = 'https://vivah-backend-api.herokuapp.com/product/sort-price/';
+  sortHighPrice = 'https://vivah-backend-api.herokuapp.com/product/price-high/';
 
 //  addToCart = 'http://localhost:3000/cart/add-to-cart';
 //  removeToCart = 'http://localhost:3000/cart/remove-from-cart';
@@ -132,6 +134,15 @@ export class MenSubcategoryService {
     });
   }
   viewWishes(){
+    return this.http.get<any>(this.wishList);
+  }
+  sortingWithPrice(id:any){
+    return this.http.get<any>(this.sortPrice+id);
+  }
+  sortHighToLow(id:any){
+    return this.http.get<any>(this.sortHighPrice+id);
+  }
+
     const wishlistCache = this.responseCache.get(this.wishList);
     if(wishlistCache){
       return wishlistCache;
@@ -140,4 +151,5 @@ export class MenSubcategoryService {
     response.subscribe(wishes => this.responseCache.set(this.wishList,wishes));
     return response;
     }
+
 }
