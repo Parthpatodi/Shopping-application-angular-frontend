@@ -29,7 +29,7 @@ const routes: Routes = [
  {path:'add-cart',component:CartComponent,canActivate:[AuthGuard]},
  {path:'search-product',component:SearchProductComponent},
  {path:'add-favourite',component:AddFavouriteComponent},
- {path:'user-profile',component:UserProfileComponent},
+ {path:'user-profile',component:UserProfileComponent,canActivate:[AuthGuard]},
  {path:'**' , component:PageNotFoundComponent}
 ];
 
