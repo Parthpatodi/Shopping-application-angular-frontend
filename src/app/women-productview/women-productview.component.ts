@@ -26,11 +26,11 @@ export class WomenProductviewComponent implements OnInit {
 
    })
   }
-  amount:any;
+
   title = 'payment';
- onPay(){
+ onPay(amount:any){
   if(this.isLoggedIn()){
-   this.menService.createOrder(this.amount).subscribe(data=>{
+   this.menService.createOrder(amount).subscribe(data=>{
      console.log(data.id);
      console.log(data);
      alert("first api call");

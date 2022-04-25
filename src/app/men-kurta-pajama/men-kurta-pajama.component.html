@@ -1,12 +1,11 @@
 
   <div class="dropdown">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+    <button type="button" class="btn mar hello dropdown-toggle" data-bs-toggle="dropdown">
       Sort
     </button>
     <ul class="dropdown-menu">
       <li><a (click)="sortWithSort()" class="dropdown-item" >low to high</a></li>
       <li><a (click)="sortPriceWithHigh()" class="dropdown-item" >High To Low</a></li>
-      <li><a class="dropdown-item" href="#">Link 3</a></li>
     </ul>
   </div>
   <div class="container">
@@ -15,11 +14,11 @@
           <div class="card h-100">
               <img (click)="add(item._id)" src="{{item.productImageFront}}" class="card-img-top" height="500px" />
               <div class="card-body">
-  
+
                   <h4 class="card-title">
                       {{item.productName}}
                   </h4>
-  
+
                   <h4 class="price"> Rs. {{item.productPrice}}</h4><br>
                   <button (click)="addToCart(item._id,$event.target)" class="btn hello">Add To Cart</button>
                   <button (click)="addToWishList(item._id,$event.target)" class="btn hello">Add To Wishlist</button>

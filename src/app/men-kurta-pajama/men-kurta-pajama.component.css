@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap');
-
+.mar{
+  margin-top: 70px;
+}
 .hello {
   background-color: #810000;
 

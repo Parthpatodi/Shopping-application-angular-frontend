@@ -10,7 +10,7 @@ export class WomenSubcategoryService {
   allCategory = 'http://localhost:3000/product/sort';
   //women_subCategory='https://vivah-backend.herokuapp.com/subcategory/bySubCategory/625aa923d7d40b24a87428fc'
   //women_subCategory = 'https://vivah-backend.herokuapp.com/subcategory/subcategoryList';
-  view_Profile = "http://localhost:3000/view-profile";
+  view_Profile = "http://localhost:3000/user/view-profile";
    edit_Profile =  "http://localhost:3000/user/edit-user";
    order = "http://localhost:3000/order/order-view";
   constructor(private http:HttpClient) { }
