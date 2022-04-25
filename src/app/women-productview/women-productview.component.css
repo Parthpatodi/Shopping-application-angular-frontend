@@ -31,13 +31,7 @@
     bottom: 15px;
 
   }
-  /* lib-ngx-image-zoom{
-    top: 100px;
-    height: 400px;
-    width: 300px;
-    padding-left: 40px;
 
-  } */
 .modal-dialog{
 
 }
@@ -61,6 +55,7 @@
     display:flex;
     flex-direction: column;
     height: 100%;
+
 }
 .small-images img{
     top: 50px;
@@ -72,18 +67,11 @@
 .small-images img:hover{
     opacity:1;
 }
- /* .main-images lib-ngx-image-zoom{
-
-/* }  */
-
-.fix{
-    top: 100px;
-    /* height: 100%; */
+ .main-images img{
+     top: 100px;
+    height: 100%;
     padding-left: 40px;
-    height: 400px;
-    width: 300px;
 }
-
 .card{
     border:0;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -191,7 +179,7 @@
     margin: 0px 8px;
 }
 
-/*=========Recent-post==========*/
+/* /=========Recent-post==========/ */
 .title_bx h3.title {
     font-size: 22px;
     text-transform: capitalize;
@@ -249,18 +237,18 @@
 .owl-nav .owl-prev i, .owl-nav .owl-next i {
     left: 0px;
 }
-._p-qty .decrease_ {
+.p-qty .decrease {
     position: relative;
     right: -5px;
     top: 3px;
 }
 
-._p-qty .increase_ {
+.p-qty .increase {
     position: relative;
     top: 3px;
     left: -5px;
 }
-/*========box========*/
+/* /========box========/ */
 .sq_box {
     padding-bottom: 5px;
     border-bottom: solid 2px #fd7f34;
