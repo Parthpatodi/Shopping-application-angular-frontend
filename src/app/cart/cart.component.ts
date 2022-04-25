@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
   email:any='';
   address:any='';
   contactNumber:any='';
-  total:any=0;
+  total:any=1;
   mobile:any='';
   shipping:any='';
   payment:any='';
@@ -26,9 +26,6 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.menService.viewCart().subscribe((data: any) => {
       this.product = data;
-       for(let i=0;i<this.product.productList.length;i++){
-         this.sum = this.sum + this.product.productList[i].productPrice;
-       }
       localStorage.setItem('order-item', JSON.stringify(this.product.productList));
     })
   }
@@ -81,7 +78,8 @@ export class CartComponent implements OnInit {
   }
 getData(num:any,price:any){
    this.total = num*1 * price *1;
-   alert(this.total);
+   this.sum = this.sum + this.total;
+   alert(this.sum);
 }
   checkOut(){
     this.orderItem = localStorage.getItem('order-item');
